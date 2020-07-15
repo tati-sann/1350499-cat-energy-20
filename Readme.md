@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Татьяна Санникова](https://up.htmlacademy.ru/adaptive/20/user/1350499).
-* Наставник: [Ольга Вадясова] (https://up.htmlacademy.ru/adaptive/20/user/46068).
+* Наставник: [Ольга Вадясова](https://up.htmlacademy.ru/adaptive/20/user/46068).
 
 ---
 
