@@ -8,7 +8,7 @@
 
 <body>
     <header class="page-header">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу">
             <img src="https://via.placeholder.com/33x38" alt="Логотип CAT ENERGY">
             <img src="https://via.placeholder.com/101x18" alt="CAT ENERGY">
         </a>
@@ -19,10 +19,10 @@
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
                     <li class="site-list__item">
-                        <a>Главная</a>
+                        <a href="index.html">Главная</a>
                     </li>
                     <li class="site-list__item site-list__item--active">
-                        <a href="catalog.html">Каталог продукции</a>
+                        <a>Каталог продукции</a>
                     </li>
                     <li class="site-list__item">
                         <a href="form.html">Подбор продукции</a>
@@ -44,7 +44,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy PRO 500 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy PRO 500 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -70,7 +72,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy PRO 1000 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -96,7 +100,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy PRO 500 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy PRO 500 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -122,7 +128,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy PRO 1000 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -148,7 +156,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy Slim 500 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy Slim 500 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -174,7 +184,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy Slim 1000 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy Slim 1000 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -200,7 +212,9 @@
                             <img src="https://via.placeholder.com/140x112" alt="Изображение продукта">
                         </a>
 
-                        <h3 class="product__title">Cat Energy Slim 500 г</h3>
+                        <h3 class="product__title">
+                            <a class="product__link" href="#">Cat Energy Slim 500 г</a>
+                        </h3>
 
                         <table class="product__characteristics characteristics">
                             <tbody>
@@ -228,6 +242,80 @@
                     <a class="products-more__button button" href="#">Показать все</a>
                 </div>
             </div>
+        </section>
+
+        <section class="additional-products">
+            <h2 class="additional-products__title">Дополнительные товары</h2>
+            <ul class="additional-products__list">
+                <li class="additional-products__item additional-product">
+                    <h3 class="additional-product__title">
+                        <a class="additional-product__link" href="#">Сахарозаменитель</a>
+                    </h3>
+
+                    <table class="additional-product__price price">
+                        <tbody>
+                            <tr class="price__item">
+                                <td class="price__quantity">1 упаковка (100 г)</td>
+                                <td class="price__value">200 Р</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="additional-products__button button" href="#">Заказать</a>
+                </li>
+
+                <li class="additional-products__item additional-product">
+                    <h3 class="additional-product__title">
+                        <a class="additional-product__link" href="#">Питьевая вода</a>
+                    </h3>
+
+                    <table class="additional-product__price price">
+                        <tbody>
+                            <tr class="price__item">
+                                <td class="price__quantity">5 литров</td>
+                                <td class="price__value">50 Р</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="additional-products__button button" href="#">Заказать</a>
+                </li>
+
+                <li class="additional-products__item additional-product">
+                    <h3 class="additional-product__title">
+                        <a class="additional-product__link" href="#">Молоко</a>
+                    </h3>
+
+                    <table class="additional-product__price price">
+                        <tbody>
+                            <tr class="price__item">
+                                <td class="price__quantity">1 литр</td>
+                                <td class="price__value">100 Р</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="additional-products__button button" href="#">Заказать</a>
+                </li>
+
+                <li class="additional-products__item additional-product">
+                    <h3 class="additional-product__title">
+                        <a class="additional-product__link" href="#">Витамины</a>
+                    </h3>
+
+                    <table class="additional-product__price price">
+                        <tbody>
+                            <tr class="price__item">
+                                <td class="price__quantity">1 упаковка (30 г)</td>
+                                <td class="price__value">300 Р</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="additional-products__button button" href="#">Заказать</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="promotion">
+            <h2 class="visually-hidden">Акция</h2>
+            <p class="promotion__text">Закажите все и получите чехол для кота в подарок!</p>
         </section>
 
         <section class="address">
