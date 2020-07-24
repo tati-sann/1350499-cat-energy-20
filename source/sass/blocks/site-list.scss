@@ -1,0 +1,19 @@
+.site-list {
+    @include no-list;
+}
+
+.site-list__link {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $basic-black;
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+        outline: none;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+}

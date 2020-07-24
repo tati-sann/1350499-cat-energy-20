@@ -1,0 +1,26 @@
+.instruction {
+    padding: 0 20px 40px;
+}
+
+.instruction__title {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 38px;
+}
+
+.instruction__list {
+    @include no-list;
+    display: grid;
+    row-gap: 20px;
+    padding-left: 80px;
+}
+
+.instruction__text {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 18px;
+    color: $special-dark-grey;
+    margin: 0;
+}

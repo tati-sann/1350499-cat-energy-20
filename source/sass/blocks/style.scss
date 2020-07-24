@@ -1,0 +1,47 @@
+/*import --->*/
+
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "button.scss";
+@import "page-header.scss";
+@import "main-nav.scss";
+@import "page-main.scss";
+@import "site-list.scss";
+@import "promo.scss";
+@import "programs";
+@import "program.scss";
+@import "instruction.scss";
+@import "social.scss";
+@import "products.scss";
+@import "product.scss";
+@import "characteristics.scss";
+@import "products-more.scss";
+
+/*<---import*/
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+    font-family: "Oswald", Arial, sans-serif;
+    color: $basic-black;
+}
+
+
+/*Mobile - временно*/
+
+body {
+    min-width: 320px;
+}
+
+.wrapper {
+    width: 280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

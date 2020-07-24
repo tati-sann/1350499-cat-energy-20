@@ -1,0 +1,13 @@
+.products__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+    margin: 0;
+    padding: 27px 20px 41px;
+    border-top: 1px solid $border-grey-light;
+    border-bottom: 1px solid $border-grey-light;
+}
+
+.products__list {
+    @include no-list;
+}
