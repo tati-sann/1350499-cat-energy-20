@@ -1,18 +1,17 @@
 html {
     height: 100%;
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: Oswald, Arial, sans-serif;
     color: $basic-black;
 }
 
 body {
     min-height: 100%;
-    margin: 0;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
+    margin: 0;
 }
 
 body {
-    width: 320px;
-    margin: 0 auto;
+    min-width: 320px;
 }
