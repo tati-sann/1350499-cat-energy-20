@@ -1,20 +1,20 @@
 .product {
-    padding: 19px 20px 25px;
-    border-bottom: 1px solid $border-grey-light;
-    text-align: center;
+  padding: 19px 20px 25px;
+  border-bottom: 1px solid $border-grey-light;
+  text-align: center;
 }
 
 .product__link {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: $special-darkest-grey;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $special-darkest-grey;
 }
 
 .product__button {
-    display: inline-block;
-    width: 100%;
-    padding: 7px 44px;
-    box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 7px 44px;
+  box-sizing: border-box;
 }

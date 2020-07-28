@@ -1,28 +1,29 @@
 .instruction__wrapper {
-    width: 280px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
 }
 
 .instruction__title {
-    margin: 0;
-    margin-bottom: 38px;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 40px;
+  margin: 0;
+  margin-bottom: 38px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .instruction__list {
-    display: grid;
-    row-gap: 20px;
-    @include no-list;
-    padding-left: 80px;
+  display: grid;
+  row-gap: 20px;
+
+  @include no-list;
+  padding-left: 80px;
 }
 
 .instruction__text {
-    margin: 0;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: Arial, sans-serif;
-    color: $special-dark-grey;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", "Verdana", sans-serif;
+  color: $special-dark-grey;
 }
