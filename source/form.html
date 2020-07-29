@@ -4,32 +4,35 @@
 <head>
     <meta charset="utf-8">
     <title>Подбор программы | CAT ENERGY</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="page-header">
-        <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу">
-            <img src=" https://via.placeholder.com/33x38" alt="Логотип CAT ENERGY">
-            <img src="https://via.placeholder.com/101x18" alt="CAT ENERGY">
-        </a>
+        <div class="page-header__wrapper">
+            <a class="page-header__logo">
+                <img src="https://via.placeholder.com/33x38" alt="Логотип CAT ENERGY">
+                <img src="https://via.placeholder.com/101x18" alt="CAT ENERGY">
+            </a>
 
-        <nav class="main-nav">
-            <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+            <nav class="main-nav">
+                <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
 
-            <div class="main-nav__wrapper">
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item">
-                        <a href="index.html">Главная</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="catalog.html">Каталог продукции</a>
-                    </li>
-                    <li class="site-list__item site-list__item--active">
-                        <a>Подбор продукции</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__list site-list">
+                        <li class="site-list__item">
+                            <a class="site-list__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+                        </li>
+                        <li class="site-list__item site-list__item--active">
+                            <a class="site-list__link">Подбор продукции</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main class="page-main">
@@ -125,7 +128,7 @@
             </form>
         </section>
 
-        <section class="address">
+        <section class="address address--form">
             <div class="address__wrapper">
                 <h2 class="address__title">Приглашаем к сотрудничеству дилеров!</h2>
                 <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -133,15 +136,17 @@
         </section>
 
         <section class="map">
-            <h2 class="visually-hidden">Карта</h2>
-            <img src="https://via.placeholder.com/320x362" alt="Карта">
+            <div class="map__wrapper">
+                <h2 class="visually-hidden">Карта</h2>
+                <img src="https://via.placeholder.com/320x362" alt="Карта">
+            </div>
         </section>
     </main>
 
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <a class="page-footer__logo">
-                <img src="https://via.placeholder.com/101x18" alt="CAT ENERGY">
+                <img src="https://via.placeholder.com/128x24" alt="CAT ENERGY">
             </a>
 
             <div class="page-footer__social social">

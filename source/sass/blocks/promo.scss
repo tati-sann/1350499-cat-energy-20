@@ -1,0 +1,42 @@
+.promo {
+  text-align: center;
+  color: $basic-white;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center top;
+}
+
+.promo__wrapper {
+  display: grid;
+  width: 280px;
+  margin: 0 auto;
+  padding: 27px 20px 0;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__product {
+  margin-bottom: 3px;
+}
+
+.promo__button {
+  display: inline-block;
+  width: 100%;
+  padding: 7px 44px;
+  box-sizing: border-box;
+}

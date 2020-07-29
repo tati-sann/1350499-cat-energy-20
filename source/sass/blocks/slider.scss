@@ -1,0 +1,14 @@
+.slider__list {
+  @include no-list;
+}
+
+.slider__button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: inherit;
+}

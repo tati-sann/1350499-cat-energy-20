@@ -1,0 +1,25 @@
+.address--catalog,
+.address--form {
+  background-color: $basic-grey;
+}
+
+.address__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 28px 20px 22px;
+}
+
+.address__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.address__text {
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Arial", "Verdana", sans-serif;
+}

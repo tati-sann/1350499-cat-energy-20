@@ -1,0 +1,45 @@
+.products-more__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 1px solid $border-grey-light;
+}
+
+.products-more__title {
+  margin: 0;
+  margin-bottom: 8px;
+  padding-top: 23px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $special-black;
+}
+
+.products-more__subtitle {
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Arial", "Verdana", sans-serif;
+  color: $special-dark-grey;
+}
+
+.products-more__button {
+  display: inline-block;
+  width: 100%;
+  padding: 7px 44px;
+  box-sizing: border-box;
+  background-color: $basic_grey;
+  color: $special-dark-grey;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-grey-dark;
+  }
+
+  &:active {
+    color: rgba($special-dark-grey, 0.3);
+  }
+}
