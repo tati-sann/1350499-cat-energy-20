@@ -1,0 +1,68 @@
+.fieldset-row {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid $border-fieldset-grey;
+}
+
+.fieldset-row--cat {
+  padding-bottom: 22px;
+}
+
+.fieldset-row--owner {
+  border: none;
+}
+
+.fieldset-row__legend {
+  margin-bottom: 32px;
+  padding-top: 26px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.fieldset-row__list {
+  display: grid;
+  row-gap: 13px;
+
+  @include no-list;
+}
+
+.fieldset-row__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fieldset-row__name {
+  margin-right: 14px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}
+
+.fieldset-row__input {
+  flex-grow: 1;
+  padding: 13px;
+  box-sizing: border-box;
+  border: 1px solid $input-border-grey;
+
+  &:hover {
+    border-color: $input-border-hover-grey;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $special-dark-grey;
+  }
+}
+
+.fieldset-row__input,
+.fieldset-row__input::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}

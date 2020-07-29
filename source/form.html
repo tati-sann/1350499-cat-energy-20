@@ -38,99 +38,137 @@
     <main class="page-main">
         <h1 class="visually-hidden">CAT ENERGY. Подбор программы</h1>
 
-        <section class="program">
-            <h2 class="program__title">Подбор программы</h2>
-            <p class="program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <section class="program-selection">
+          <div class="program-selection__wrapper">
+            <h2 class="program-selection__title">Подбор программы</h2>
+            <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-            <form class="program__form program-form" action="https://echo.htmlacademy.ru" method="post">
-                <fieldset class="program-form__fieldset fieldset fieldset--cat">
+            <form class="program-selection__form program-selection-form" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="program-selection-form__fieldset fieldset-row fieldset-row--cat">
                     <legend class="visually-hidden">Информация о коте</legend>
 
-                    <ul class="fieldset__list">
-                        <li class="fieldset__item">
-                            <label>Имя:<sup>*</sup><input type="text" name="name" placeholder="Барсик" required></label>
+                    <ul class="fieldset-row__list">
+                        <li class="fieldset-row__item">
+                            <label class="fieldset-row__label">
+                              <span class="fieldset-row__name">Имя:<sup>*</sup></span>
+                              <input class="fieldset-row__input" type="text" name="name" placeholder="Барсик" required>
+                            </label>
                         </li>
 
-                        <li class="fieldset__item">
-                            <label>Вес(кг):<sup>*</sup><input type="number" name="weight" min="0" max="30" step="1" placeholder="7" required></label>
+                        <li class="fieldset-row__item">
+                            <label class="fieldset-row__label">
+                              <span class="fieldset-row__name">Вес(кг):<sup>*</sup></span>
+                              <input class="fieldset-row__input" type="number" name="weight" min="0" max="30" step="1" placeholder="7" required>
+                            </label>
                         </li>
 
-                        <li class="fieldset__item">
-                            <label>Возраст(лет):<input type="number" name="age" min="0" max="30" step="1" placeholder="7"></label>
+                        <li class="fieldset-row__item">
+                            <label class="fieldset-row__label">
+                              <span class="fieldset-row__name">Возраст(лет):</span>
+                              <input class="fieldset-row__input" type="number" name="age" min="0" max="30" step="1" placeholder="7">
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
 
-                <fieldset class="program-form__fieldset fieldset fieldset--programm">
+                <fieldset class="program-selection-form__fieldset fieldset-radio fieldset-radio--programm">
                     <legend class="visually-hidden">Программа</legend>
 
-                    <ul class="fieldset__list">
-                        <li class="fieldset__item">
-                            <label><input type="radio" name="program" value="Похудение" checked>Похудение</label>
+                    <ul class="fieldset-radio__list">
+                        <li class="fieldset-radio__item">
+                            <label class="fieldset-radio__label">
+                              <input class="visually-hidden" type="radio" name="program" value="Похудение" checked>
+                              <span class="fieldset-radio__name">Похудение</span>
+                            </label>
                         </li>
 
-                        <li class="fieldset__item">
-                            <label><input type="radio" name="program" value="Набор массы">Набор массы</label>
+                        <li class="fieldset-radio__item">
+                            <label class="fieldset-radio__label">
+                              <input class="visually-hidden" type="radio" name="program" value="Набор массы">
+                              <span class="fieldset-radio__name">Набор массы</span>
+                            </label>
                         </li>
 
-                        <li class="fieldset__item">
-                            <label><input type="radio" name="program" value="Не знаю (нужен ваш совет)">Не знаю (нужен ваш совет)</label>
-                        </li>
-                    </ul>
-                </fieldset>
-
-                <fieldset class="program-form__fieldset fieldset fieldset--owner">
-                    <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
-
-                    <ul class="fieldset__list">
-                        <li class="fieldset__item">
-                            <label>E-mail:<sup>*</sup><input type="email" name="e-mail" placeholder="kuklachev@gmail.com" required></label>
-                        </li>
-
-                        <li class="fieldset__item">
-                            <label>Телефон:<sup>*</sup><input type="tel" name="tel" placeholder="8 (960) 900-60-90" required></label>
+                        <li class="fieldset-radio__item">
+                            <label class="fieldset-radio__label">
+                              <input class="visually-hidden" type="radio" name="program" value="Не знаю (нужен ваш совет)">
+                              <span class="fieldset-radio__name">Не знаю (нужен ваш совет)</span>
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
 
-                <fieldset class="program-form__fieldset fieldset fieldset--comment">
-                    <legend class="fieldset__legend">Комментарий</legend>
-                    <textarea name="about cat" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
-                </fieldset>
+                <fieldset class="program-selection-form__fieldset fieldset-row fieldset-row--owner">
+                    <legend class="fieldset-row__legend">Контактные данные (владельца кота)</legend>
 
-                <fieldset class="program-form__fieldset fieldset fieldset--additional">
-                    <legend class="fieldset__legend">Дополнительно</legend>
-
-                    <ul class="fieldset__list">
-                        <li class="fieldset__item">
-                            <label><input type="checkbox" name="additional products" value="Сахарозаменитель" checked>Сахарозаменитель</label>
+                    <ul class="fieldset-row__list">
+                        <li class="fieldset-row__item">
+                            <label class="fieldset-row__label">
+                              <span class="fieldset-row__name">E-mail:<sup>*</sup></span>
+                              <input class="fieldset-row__input" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+                            </label>
                         </li>
 
-                        <li class="fieldset__item">
-                            <label><input type="checkbox" name="additional products" value="Питьевая вода">Питьевая вода</label>
-                        </li>
-
-                        <li class="fieldset__item">
-                            <label><input type="checkbox" name="additional products" value="Молоко">Молоко</label>
-                        </li>
-
-                        <li class="fieldset__item">
-                            <label><input type="checkbox" name="additional products" value="Витамины">Витамины</label>
+                        <li class="fieldset-row__item">
+                            <label class="fieldset-row__label">
+                              <span class="fieldset-row__name">Телефон:<sup>*</sup></span>
+                              <input class="fieldset-row__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
 
-                <button class="program-form__button button" type="submit">Отправить заявку</button>
+                <fieldset class="program-selection-form__fieldset fieldset-textarea fieldset-textarea--comment">
+                    <legend class="fieldset-textarea__legend">Комментарий</legend>
+                    <textarea class="fieldset-textarea__input" name="about cat" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </fieldset>
 
-                <p class="program-form__required">
+                <fieldset class="program-selection-form__fieldset fieldset-checkbox fieldset-checkbox--additional">
+                    <legend class="fieldset-checkbox__legend">Дополнительно</legend>
+
+                    <ul class="fieldset-checkbox__list">
+                        <li class="fieldset-checkbox__item">
+                            <label class="fieldset-checkbox__label">
+                              <input class="visually-hidden" type="checkbox" name="additional products" value="Сахарозаменитель" checked>
+                              <span class="fieldset-checkbox__name">Сахарозаменитель</span>
+                            </label>
+                        </li>
+
+                        <li class="fieldset-checkbox__item">
+                            <label class="fieldset-checkbox__label">
+                              <input class="visually-hidden" type="checkbox" name="additional products" value="Питьевая вода">
+                              <span class="fieldset-checkbox__name">Питьевая вода</span>
+                            </label>
+                        </li>
+
+                        <li class="fieldset-checkbox__item">
+                            <label class="fieldset-checkbox__label">
+                              <input class="visually-hidden" type="checkbox" name="additional products" value="Молоко">
+                              <span class="fieldset-checkbox__name">Молоко</span>
+                            </label>
+                        </li>
+
+                        <li class="fieldset-checkbox__item">
+                            <label class="fieldset-checkbox__label">
+                              <input class="visually-hidden" type="checkbox" name="additional products" value="Витамины">
+                              <span class="fieldset-checkbox__name">Витамины</span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <button class="program-selection-form__button button" type="submit">Отправить заявку</button>
+
+                <p class="program-selection-form__required">
                     <small><sup>*</sup> - Обязательные поля</small>
                 </p>
             </form>
+          </div>
         </section>
 
         <section class="address address--form">
             <div class="address__wrapper">
-                <h2 class="address__title">Приглашаем к сотрудничеству дилеров!</h2>
+                <h2 class="address__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
                 <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             </div>
         </section>

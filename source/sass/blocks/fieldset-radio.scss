@@ -1,0 +1,34 @@
+.fieldset-radio {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid $border-fieldset-grey;
+}
+
+.fieldset-radio--programm {
+  padding: 20px 0 22px;
+}
+
+.fieldset-radio__list {
+  display: grid;
+  row-gap: 13px;
+
+  @include no-list;
+}
+
+.fieldset-radio__item {
+  padding-left: 35px;
+}
+
+.fieldset-radio__label {
+  cursor: pointer;
+}
+
+.fieldset-radio__name {
+  display: inline-block;
+  padding: 6px 0;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-darkest-grey;
+}

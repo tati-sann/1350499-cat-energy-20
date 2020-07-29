@@ -2,6 +2,19 @@
   @include no-list;
 }
 
+.site-list__item {
+  display: inline-block;
+  width: 100%;
+  padding: 24px 20px;
+  border-top: 1px solid $border-nav-grey;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.site-list__item:last-child {
+  border-bottom: 1px solid $border-nav-grey;
+}
+
 .site-list__link {
   font-weight: 500;
   font-size: 20px;

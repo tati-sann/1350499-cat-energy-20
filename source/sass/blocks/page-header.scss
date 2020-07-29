@@ -1,10 +1,11 @@
-.page-header {
-  min-height: 55px;
-}
-
 .page-header__wrapper {
   display: block;
-  width: 280px;
+  width: 320px;
+  min-height: 55px;
   margin: 0 auto;
-  padding: 11px 20px 0;
+}
+
+.page-header__logo {
+  display: block;
+  padding: 11px 20px 17px;
 }

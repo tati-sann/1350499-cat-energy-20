@@ -1,14 +1,31 @@
 .product {
-  padding: 19px 20px 25px;
+  padding: 0 20px 22px;
   border-bottom: 1px solid $border-grey-light;
   text-align: center;
 }
 
-.product__link {
+.product__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.product__information {
+  padding-top: 18px;
+}
+
+.product__title {
+  display: inline-block;
+  max-width: 80px;
+  margin: 0;
+  margin-bottom: 18px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: left;
+}
+
+.product__link {
   color: $special-darkest-grey;
 }
 
