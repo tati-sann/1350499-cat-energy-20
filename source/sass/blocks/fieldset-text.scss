@@ -1,19 +1,19 @@
-.fieldset-row {
+.fieldset-text {
   margin: 0;
   padding: 0;
   border: none;
   border-bottom: 1px solid $border-fieldset-grey;
+
+  &--cat {
+    padding-bottom: 22px;
+  }
+
+  &--owner {
+    border: none;
+  }
 }
 
-.fieldset-row--cat {
-  padding-bottom: 22px;
-}
-
-.fieldset-row--owner {
-  border: none;
-}
-
-.fieldset-row__legend {
+.fieldset-text__legend {
   margin-bottom: 32px;
   padding-top: 26px;
   font-weight: normal;
@@ -21,20 +21,20 @@
   line-height: 26px;
 }
 
-.fieldset-row__list {
+.fieldset-text__list {
   display: grid;
   row-gap: 13px;
 
   @include no-list;
 }
 
-.fieldset-row__label {
+.fieldset-text__label {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.fieldset-row__name {
+.fieldset-text__name {
   margin-right: 14px;
   font-size: 16px;
   line-height: 18px;
@@ -42,11 +42,12 @@
   color: $special-dark-grey;
 }
 
-.fieldset-row__input {
+.fieldset-text__input {
   flex-grow: 1;
   padding: 13px;
   box-sizing: border-box;
   border: 1px solid $input-border-grey;
+  appearance: textfield;
 
   &:hover {
     border-color: $input-border-hover-grey;
@@ -56,10 +57,15 @@
     outline: none;
     border-color: $special-dark-grey;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
-.fieldset-row__input,
-.fieldset-row__input::placeholder {
+.fieldset-text__input,
+.fieldset-text__input::placeholder {
   font-size: 16px;
   line-height: 18px;
   font-family: inherit;

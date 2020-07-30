@@ -38,40 +38,40 @@
     <main class="page-main">
         <h1 class="visually-hidden">CAT ENERGY. Подбор программы</h1>
 
-        <section class="program-selection">
-          <div class="program-selection__wrapper">
-            <h2 class="program-selection__title">Подбор программы</h2>
-            <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <section class="program-form">
+          <div class="program-form__wrapper">
+            <h2 class="program-form__title">Подбор программы</h2>
+            <p class="program-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-            <form class="program-selection__form program-selection-form" action="https://echo.htmlacademy.ru" method="post">
-                <fieldset class="program-selection-form__fieldset fieldset-row fieldset-row--cat">
+            <form class="program-form__form form-program" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="form-program__fieldset fieldset-text fieldset-text--cat">
                     <legend class="visually-hidden">Информация о коте</legend>
 
-                    <ul class="fieldset-row__list">
-                        <li class="fieldset-row__item">
-                            <label class="fieldset-row__label">
-                              <span class="fieldset-row__name">Имя:<sup>*</sup></span>
-                              <input class="fieldset-row__input" type="text" name="name" placeholder="Барсик" required>
+                    <ul class="fieldset-text__list">
+                        <li class="fieldset-text__item">
+                            <label class="fieldset-text__label">
+                              <span class="fieldset-text__name">Имя:<sup>*</sup></span>
+                              <input class="fieldset-text__input" type="text" name="name" placeholder="Барсик" required>
                             </label>
                         </li>
 
-                        <li class="fieldset-row__item">
-                            <label class="fieldset-row__label">
-                              <span class="fieldset-row__name">Вес(кг):<sup>*</sup></span>
-                              <input class="fieldset-row__input" type="number" name="weight" min="0" max="30" step="1" placeholder="7" required>
+                        <li class="fieldset-text__item">
+                            <label class="fieldset-text__label">
+                              <span class="fieldset-text__name">Вес(кг):<sup>*</sup></span>
+                              <input class="fieldset-text__input" type="number" name="weight" min="0" max="30" step="1" placeholder="7" required>
                             </label>
                         </li>
 
-                        <li class="fieldset-row__item">
-                            <label class="fieldset-row__label">
-                              <span class="fieldset-row__name">Возраст(лет):</span>
-                              <input class="fieldset-row__input" type="number" name="age" min="0" max="30" step="1" placeholder="7">
+                        <li class="fieldset-text__item">
+                            <label class="fieldset-text__label">
+                              <span class="fieldset-text__name">Возраст(лет):</span>
+                              <input class="fieldset-text__input" type="number" name="age" min="0" max="30" step="1" placeholder="7">
                             </label>
                         </li>
                     </ul>
                 </fieldset>
 
-                <fieldset class="program-selection-form__fieldset fieldset-radio fieldset-radio--programm">
+                <fieldset class="form-program__fieldset fieldset-radio fieldset-radio--programm">
                     <legend class="visually-hidden">Программа</legend>
 
                     <ul class="fieldset-radio__list">
@@ -98,32 +98,32 @@
                     </ul>
                 </fieldset>
 
-                <fieldset class="program-selection-form__fieldset fieldset-row fieldset-row--owner">
-                    <legend class="fieldset-row__legend">Контактные данные (владельца кота)</legend>
+                <fieldset class="form-program__fieldset fieldset-text fieldset-text--owner">
+                    <legend class="fieldset-text__legend">Контактные данные (владельца кота)</legend>
 
-                    <ul class="fieldset-row__list">
-                        <li class="fieldset-row__item">
-                            <label class="fieldset-row__label">
-                              <span class="fieldset-row__name">E-mail:<sup>*</sup></span>
-                              <input class="fieldset-row__input" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+                    <ul class="fieldset-text__list">
+                        <li class="fieldset-text__item">
+                            <label class="fieldset-text__label">
+                              <span class="fieldset-text__name">E-mail:<sup>*</sup></span>
+                              <input class="fieldset-text__input" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
                             </label>
                         </li>
 
-                        <li class="fieldset-row__item">
-                            <label class="fieldset-row__label">
-                              <span class="fieldset-row__name">Телефон:<sup>*</sup></span>
-                              <input class="fieldset-row__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                        <li class="fieldset-text__item">
+                            <label class="fieldset-text__label">
+                              <span class="fieldset-text__name">Телефон:<sup>*</sup></span>
+                              <input class="fieldset-text__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
                             </label>
                         </li>
                     </ul>
                 </fieldset>
 
-                <fieldset class="program-selection-form__fieldset fieldset-textarea fieldset-textarea--comment">
+                <fieldset class="form-program__fieldset fieldset-textarea fieldset-textarea--comment">
                     <legend class="fieldset-textarea__legend">Комментарий</legend>
                     <textarea class="fieldset-textarea__input" name="about cat" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </fieldset>
 
-                <fieldset class="program-selection-form__fieldset fieldset-checkbox fieldset-checkbox--additional">
+                <fieldset class="form-program__fieldset fieldset-checkbox fieldset-checkbox--additional">
                     <legend class="fieldset-checkbox__legend">Дополнительно</legend>
 
                     <ul class="fieldset-checkbox__list">
@@ -157,9 +157,9 @@
                     </ul>
                 </fieldset>
 
-                <button class="program-selection-form__button button" type="submit">Отправить заявку</button>
+                <button class="form-program__button button" type="submit">Отправить заявку</button>
 
-                <p class="program-selection-form__required">
+                <p class="form-program__text">
                     <small><sup>*</sup> - Обязательные поля</small>
                 </p>
             </form>
