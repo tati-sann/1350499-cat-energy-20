@@ -1,0 +1,36 @@
+.fieldset-checkbox {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.fieldset-checkbox__legend {
+  margin-bottom: 34px;
+  padding-top: 27px;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.fieldset-checkbox__list {
+  display: grid;
+  row-gap: 13px;
+
+  @include no-list;
+  padding-bottom: 34px;
+}
+
+.fieldset-checkbox__label {
+  cursor: pointer;
+}
+
+.fieldset-checkbox__item {
+  padding-left: 46px;
+}
+
+.fieldset-checkbox__name {
+  display: inline-block;
+  padding: 6px 0;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}

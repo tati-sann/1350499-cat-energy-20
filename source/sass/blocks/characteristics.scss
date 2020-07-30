@@ -1,7 +1,15 @@
 .characteristics__name,
 .characteristics__value {
-  font-family: "Arial", "Verdana", sans-serif;
+  font-family: "Arial", "Oswald", sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: $special-dark-grey;
+}
+
+.characteristics__name {
+  text-align: left;
+}
+
+.characteristics__value {
+  text-align: right;
 }

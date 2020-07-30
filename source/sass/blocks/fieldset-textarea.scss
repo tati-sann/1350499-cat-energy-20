@@ -1,0 +1,40 @@
+.fieldset-textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.fieldset-textarea__legend {
+  margin-bottom: 34px;
+  padding-top: 27px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.fieldset-textarea__input {
+  width: 100%;
+  min-height: 150px;
+  padding: 13px 13px;
+  border: 1px solid $input-border-grey;
+  box-sizing: border-box;
+  resize: none;
+
+  &:hover {
+    border-color: $input-border-hover-grey;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $special-dark-grey;
+  }
+}
+
+.fieldset-textarea__input,
+.fieldset-textarea__input::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}
