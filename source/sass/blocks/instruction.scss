@@ -1,7 +1,18 @@
 .instruction__wrapper {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
-  padding: 0 20px 40px;
+  padding: 7px 20px 42px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 45px 30px 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 31px 80px 11px;
+  }
 }
 
 .instruction__title {
@@ -10,6 +21,12 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .instruction__list {
@@ -18,12 +35,40 @@
 
   @include no-list;
   padding-left: 80px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 37px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.instruction__item {
+  @media (min-width: $tablet-width) {
+    padding: 151px 60px 57px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .instruction__text {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", "Verdana", sans-serif;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
