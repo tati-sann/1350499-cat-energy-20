@@ -1,12 +1,11 @@
 .site-list {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    width: 440px;
   }
 }
 
@@ -15,7 +14,6 @@
   padding: 24px 20px;
   border-top: 1px solid $border-nav-grey;
   text-align: center;
-  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     padding: 8px 0;

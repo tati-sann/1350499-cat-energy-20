@@ -22,7 +22,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 380px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
@@ -73,8 +73,13 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 10px;
     border: none;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
   }
 }

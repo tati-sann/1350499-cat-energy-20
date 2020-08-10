@@ -1,17 +1,15 @@
 .instruction__wrapper {
-  width: 320px;
-  margin: 0 auto;
   padding: 7px 20px 42px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    width: 708px;
     padding: 45px 30px 47px;
+    box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1220px;
-    padding: 31px 80px 11px;
+    padding: 34px 110px 11px;
+    box-sizing: border-box;
   }
 }
 
@@ -52,7 +50,7 @@
 
 .instruction__item {
   @media (min-width: $tablet-width) {
-    padding: 151px 60px 57px 0;
+    padding: 153px 60px 57px 0;
   }
 
   @media (min-width: $desktop-width) {

@@ -3,7 +3,6 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    min-height: 511px;
     border: none;
     background-color: $basic-grey;
   }
@@ -11,23 +10,25 @@
 
 .product__wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 0 20px 22px;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 33px;
-    padding: 234px 38px 40px;
+    padding: 161px 35px 40px;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
+.product__card {
+  display: flex;
+  flex-direction: row;
+  padding-top: 18px;
+
+  @media (min-width: $tablet-width) {
     margin-bottom: 33px;
-    padding: 234px 38px 40px;
+    padding: 0;
   }
 }
 
@@ -36,10 +37,6 @@
     position: absolute;
     display: none;
   }
-}
-
-.product__information {
-  padding-top: 18px;
 }
 
 .product__title {
@@ -52,6 +49,13 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    max-width: 170px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .product__link {
@@ -61,8 +65,10 @@
 .product__button {
   display: inline-block;
   width: 100%;
-  padding: 7px 44px;
+  padding: 10px 44px;
   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     width: 248px;
