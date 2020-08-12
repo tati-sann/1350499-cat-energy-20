@@ -2,6 +2,8 @@
   border: none;
   background-color: $basic-green;
   text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
   color: $basic-white;
   cursor: pointer;
 
@@ -14,5 +16,9 @@
   &:active {
     background-color: $basic-green-dark;
     color: rgba($basic-white, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
   }
 }

@@ -5,21 +5,43 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center top;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    color: $basic-black;
+    background-image: none;
+  }
 }
 
 .promo__wrapper {
-  display: grid;
-  width: 280px;
-  margin: 0 auto;
   padding: 27px 20px 0;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 50px 30px 526px 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 585px;
+    padding: 73px 110px 0 190px;
+  }
 }
 
 .promo__title {
+  display: inline-block;
   margin: 0;
   margin-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    max-width: 414px;
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .promo__slogan {
@@ -28,15 +50,42 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__product {
   margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
+    z-index: 0;
+    top: 0;
+    left: calc(50% - 150px);
+  }
 }
 
 .promo__button {
   display: inline-block;
   width: 100%;
-  padding: 7px 44px;
+  padding: 7px 26px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: 244px;
+    padding: 13px 26px;
+  }
 }

@@ -2,4 +2,30 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include no-list;
+}
+
+.main-nav__list a {
+  color: $basic-black;
 }

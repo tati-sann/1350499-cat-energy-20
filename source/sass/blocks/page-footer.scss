@@ -3,7 +3,20 @@
 }
 
 .page-footer__wrapper {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 39px 20px 22px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 110px;
+    padding: 57px 80px;
+  }
 }
