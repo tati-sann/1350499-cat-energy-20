@@ -1,12 +1,18 @@
 .fieldset-radio {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   border: none;
   border-bottom: 1px solid $border-fieldset-grey;
-}
 
-.fieldset-radio--programm {
-  padding: 20px 0 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 28px;
+    border: 1px solid $input-border-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+  }
 }
 
 .fieldset-radio__list {
@@ -17,7 +23,11 @@
 }
 
 .fieldset-radio__item {
-  padding-left: 35px;
+  padding-left: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .fieldset-radio__label {
@@ -31,4 +41,9 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $special-darkest-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

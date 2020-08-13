@@ -1,5 +1,21 @@
-.price__item {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+.price {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.price__quantity {
+  width: 70%;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.price__value {
+  width: 30%;
+  text-align: right;
 }

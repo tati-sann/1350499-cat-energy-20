@@ -13,10 +13,12 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 55px 30px;
+    box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 110px;
-    padding: 57px 80px;
+    padding: 57px 110px;
+    box-sizing: border-box;
   }
 }

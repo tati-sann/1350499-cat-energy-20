@@ -1,14 +1,19 @@
 .fieldset-text {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   border: none;
   border-bottom: 1px solid $border-fieldset-grey;
 
   &--cat {
-    padding-bottom: 22px;
+    padding-bottom: 23px;
   }
 
   &--owner {
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
     border: none;
   }
 }
@@ -19,6 +24,16 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 65px;
+  }
 }
 
 .fieldset-text__list {
@@ -26,6 +41,18 @@
   row-gap: 13px;
 
   @include no-list;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 16px;
+  }
+}
+
+.fieldset-text--owner .fieldset-text__list {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
 }
 
 .fieldset-text__label {
@@ -40,6 +67,12 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 16px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .fieldset-text__input {
@@ -62,6 +95,11 @@
   &::-webkit-inner-spin-button {
     appearance: none;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 25px;
+    padding-top: 10px;
+  }
 }
 
 .fieldset-text__input,
@@ -71,4 +109,9 @@
   font-family: inherit;
   text-transform: uppercase;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

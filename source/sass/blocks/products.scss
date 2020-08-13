@@ -29,7 +29,6 @@
 
 .products__list {
   @include no-list;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     display: grid;

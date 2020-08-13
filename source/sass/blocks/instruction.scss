@@ -4,11 +4,13 @@
 
   @media (min-width: $tablet-width) {
     padding: 45px 30px 47px;
+    border-bottom: 1px solid $border-nav-grey;
     box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
     padding: 34px 110px 11px;
+    border: none;
     box-sizing: border-box;
   }
 }

@@ -1,20 +1,53 @@
 .program-form__wrapper {
-  width: 280px;
-  margin: 0 auto;
   padding: 27px 20px 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+    padding: 52px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 43px;
+    padding: 40px 110px;
+    box-sizing: border-box;
+  }
 }
 
 .program-form__title {
   margin: 0;
   margin-bottom: 37px;
+  padding: 0 20px;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+    padding: 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .program-form__text {
+  display: inline-block;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
+  padding: 0 20px;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 323px;
+    padding-left: 40px;
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 62px;
+    padding: 0;
+  }
 }
