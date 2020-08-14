@@ -10,13 +10,27 @@
 }
 
 .products__title {
+  position: relative;
   margin: 0;
   padding: 27px 20px 41px;
-  border-top: 1px solid $border-grey-light;
-  border-bottom: 1px solid $border-grey-light;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      margin-right: -50vw;
+      margin-left: -50vw;
+      background-color: $border-nav-grey;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -29,7 +43,6 @@
 
 .products__list {
   @include no-list;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     display: grid;

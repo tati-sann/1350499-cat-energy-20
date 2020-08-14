@@ -5,25 +5,40 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
 .site-list__item {
+  position: relative;
   display: inline-block;
   padding: 24px 20px;
-  border-top: 1px solid $border-nav-grey;
   text-align: center;
 
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      margin-right: -50vw;
+      margin-left: -50vw;
+      background-color: $border-nav-grey;
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    margin-right: 34px;
     padding: 8px 0;
     border: none;
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .site-list__item:last-child {
-    border-bottom: 1px solid $border-nav-grey;
+.site-list__item:last-child {
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
   }
 }
 

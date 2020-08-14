@@ -45,7 +45,7 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
-    max-width: 380px;
+    max-width: 377px;
     margin-bottom: 48px;
     padding: 0;
     font-size: 16px;
@@ -55,6 +55,12 @@
   @media (min-width: $desktop-width) {
     max-width: 100%;
     margin-bottom: 23px;
+  }
+}
+
+.program__text--pro {
+  @media (min-width: $tablet-width) {
+    max-width: 342px;
   }
 }
 

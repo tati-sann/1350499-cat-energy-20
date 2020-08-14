@@ -1,25 +1,17 @@
 .address {
-  background-color: $basic-white;
-}
-
-.address--catalog,
-.address--form {
-  background-color: $basic-grey;
-}
-
-.address__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 28px 20px 22px;
-  box-sizing: border-box;
+  padding: 28px 20px 25px;
 
   @media (min-width: $tablet-width) {
     padding: 66px 40px 51px;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    width: 570px;
+    min-width: 570px;
+    padding: 66px 76px 60px;
+    box-sizing: border-box;
+    background-color: $basic-white;
   }
 }
 
@@ -34,7 +26,7 @@
   @media (min-width: $tablet-width) {
     max-width: 171px;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
   }
 }
 
@@ -54,6 +46,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-right: 10px;
     text-align: left;
+  }
+}
+
+.address__text span {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 20px;
   }
 }
