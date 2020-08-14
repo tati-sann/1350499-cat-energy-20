@@ -24,8 +24,6 @@
 
 .page-header__wrapper {
   display: flex;
-  padding-top: 12px;
-  box-sizing: border-box;
   flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
@@ -43,6 +41,7 @@
 }
 
 .page-header__top {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,6 +49,21 @@
   width: 100%;
   min-height: 66px;
   padding: 0 20px;
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      margin-right: -50vw;
+      margin-left: -50vw;
+      background-color: $border-nav-grey;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 174px;

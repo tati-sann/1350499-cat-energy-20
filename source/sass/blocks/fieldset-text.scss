@@ -2,19 +2,13 @@
   margin: 0;
   padding: 0 20px;
   border: none;
-  border-bottom: 1px solid $border-fieldset-grey;
 
   &--cat {
     padding-bottom: 23px;
   }
 
-  &--owner {
-    border: none;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 0;
-    border: none;
   }
 }
 

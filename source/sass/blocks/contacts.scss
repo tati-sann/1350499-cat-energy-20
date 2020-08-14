@@ -35,6 +35,7 @@
   @media (min-width: $tablet-width) {
     min-height: 400px;
     background-image: url("../img/bg-map-tablet@1x.png");
+    background-size: cover;
   }
 
   @media (min-width: $desktop-width) {
