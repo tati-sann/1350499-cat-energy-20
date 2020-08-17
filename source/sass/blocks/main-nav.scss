@@ -4,6 +4,17 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  @media (max-width: $mobile-width-only) {
+    &--nojs,
+    &--opened {
+      display: block;
+    }
+
+    &--closed {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-weight: normal;
     font-size: 18px;
@@ -13,12 +24,6 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .main-nav__toggle {
-    display: none;
   }
 }
 

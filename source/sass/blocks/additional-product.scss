@@ -1,5 +1,5 @@
 .additional-product {
-  padding-bottom: 19px;
+  padding-bottom: 17px;
   border-bottom: 1px solid $border-grey-light;
 
   @media (min-width: $tablet-width) {
@@ -13,8 +13,8 @@
     column-gap: 40px;
     align-items: center;
     padding: 0;
-    padding-top: 15px;
-    padding-bottom: 17px;
+    padding-top: 16px;
+    padding-bottom: 15px;
   }
 }
 
@@ -41,7 +41,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 80px;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -91,14 +91,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 290px;
+    max-width: 289px;
   }
 }
 
 .additional-product__button {
   display: inline-block;
   width: 100%;
-  padding: 7px 44px;
+  padding: 9px 44px;
   box-sizing: border-box;
   text-align: center;
 

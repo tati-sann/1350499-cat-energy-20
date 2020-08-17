@@ -14,7 +14,7 @@
 }
 
 .promo__wrapper {
-  padding: 27px 20px 0;
+  padding: 27px 20px 4px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -23,8 +23,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 585px;
-    padding: 73px 110px 0 190px;
+    min-height: 580px;
+    padding: 68px 110px 0 190px;
   }
 }
 
@@ -46,22 +46,21 @@
 
 .promo__slogan {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 49px;
+    margin-bottom: 50px;
     font-size: 20px;
     line-height: 20px;
   }
 }
 
 .promo__product {
-  margin-bottom: 3px;
-
   @media (min-width: $tablet-width) {
+    display: none;
     position: absolute;
     z-index: -1;
     width: 709px;
@@ -81,11 +80,21 @@
 .promo__button {
   display: inline-block;
   width: 100%;
-  padding: 7px 26px;
+  padding: 11px 26px;
   box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: $tablet-width) {
     max-width: 244px;
-    padding: 13px 26px;
+    margin-left: -4px;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 2px;
+    padding: 17px;
   }
 }

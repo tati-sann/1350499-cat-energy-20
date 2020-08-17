@@ -1,15 +1,26 @@
 .promotion {
-  min-height: 280px;
+  position: relative;
+  min-height: 289px;
   margin-top: 39px;
   margin-bottom: 35px;
   background-color: $basic-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    right: 50%;
+    left: 50%;
+    width: 78px;
+    height: 80px;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 200px;
-    margin-top: 69px;
-    margin-bottom: 76px;
+    margin-top: 68px;
+    margin-bottom: 74px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
   }
 
@@ -24,7 +35,7 @@
 .promotion__text {
   display: inline-block;
   margin: 0;
-  padding: 0 60px;
+  padding: 0 57px;
   padding-top: 186px;
   font-weight: normal;
   font-size: 16px;
@@ -43,7 +54,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 185px 41px 0;
+    padding: 187px 41px 0;
     float: none;
     text-align: center;
   }

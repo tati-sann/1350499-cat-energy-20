@@ -11,7 +11,7 @@
 .site-list__item {
   position: relative;
   display: inline-block;
-  padding: 24px 20px;
+  padding: 23px 20px;
   text-align: center;
 
   @media (max-width: $mobile-width-only) {
@@ -30,15 +30,20 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-right: 34px;
+    margin-left: 35px;
     padding: 8px 0;
     border: none;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 34px;
+    padding: 4px 0;
+  }
 }
 
-.site-list__item:last-child {
+.site-list__item:first-child {
   @media (min-width: $tablet-width) {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 
