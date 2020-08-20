@@ -9,8 +9,8 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 39px 20px 22px;
-  box-sizing: border-box;
+  padding-top: 39px;
+  padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;

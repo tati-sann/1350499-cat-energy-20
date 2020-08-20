@@ -3,6 +3,12 @@
   table-layout: fixed;
 }
 
+@media (min-width: $tablet-width) {
+  .price__item {
+    padding-top: 5px;
+  }
+}
+
 .price__quantity {
   width: 70%;
 

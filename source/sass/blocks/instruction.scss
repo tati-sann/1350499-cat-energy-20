@@ -1,23 +1,23 @@
 .instruction__wrapper {
-  padding: 8px 20px 45px;
-  box-sizing: border-box;
+  padding-top: 8px;
+  padding-bottom: 45px;
 
   @media (min-width: $tablet-width) {
-    padding: 45px 30px 47px;
+    padding-top: 26px;
+    padding-bottom: 47px;
     border-bottom: 1px solid $border-nav-grey;
-    box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 34px 110px 11px;
+    padding-top: 30px;
+    padding-bottom: 11px;
     border: none;
-    box-sizing: border-box;
   }
 }
 
 .instruction__title {
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
@@ -31,7 +31,7 @@
 
 .instruction__list {
   display: grid;
-  row-gap: 23px;
+  row-gap: 22px;
 
   @include no-list;
 
@@ -51,6 +51,7 @@
 
 .instruction__item {
   position: relative;
+  min-height: 60px;
 
   &::before {
     content: "";

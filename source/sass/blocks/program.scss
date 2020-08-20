@@ -43,16 +43,16 @@
     padding: 78px 53px 55px;
 
     &::before {
-      top: 94px;
-      right: 62px;
+      top: 91px;
+      right: 60px;
       left: auto;
       width: 200px;
       height: 200px;
     }
 
     &--slim::after {
-      top: 83px;
-      right: 91px;
+      top: 82px;
+      right: 93px;
       left: auto;
       width: 140px;
       height: 192px;
@@ -68,7 +68,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 52px 55px;
+    padding: 41px 52px 60px;
 
     &::before {
       top: 47px;
@@ -103,8 +103,8 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    max-width: 380px;
-    margin-bottom: 26px;
+    max-width: 62%;
+    margin-bottom: 25px;
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
@@ -128,8 +128,8 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
-    max-width: 377px;
-    margin-bottom: 43px;
+    max-width: 62%;
+    margin-bottom: 41px;
     padding: 0;
     border: none;
     font-size: 16px;
@@ -138,14 +138,14 @@
 
   @media (min-width: $desktop-width) {
     max-width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 15px;
   }
 }
 
 .program--pro {
   & .program__text {
     @media (min-width: $tablet-width) {
-      max-width: 342px;
+      max-width: 57%;
     }
 
     @media (min-width: $desktop-width) {
@@ -157,8 +157,8 @@
 .program__link {
   position: relative;
   display: inline-block;
-  width: 100%;
   padding-top: 19px;
+  padding-right: 40px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -168,7 +168,7 @@
     content: "";
     position: absolute;
     top: 22px;
-    left: 100px;
+    right: 0;
     width: 24px;
     height: 12px;
     background-image: url("../img/icon-right-arrow-long.svg");
@@ -181,24 +181,23 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 10px;
+    padding-right: 56px;
     border: none;
     font-size: 20px;
     line-height: 30px;
 
     &::after {
       top: 19px;
-      left: 132px;
       width: 32px;
       height: 10px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 5px;
+    padding-right: 59px;
 
     &::after {
-      top: 15px;
-      left: 134px;
+      top: 20px;
       width: 32px;
       height: 10px;
     }
