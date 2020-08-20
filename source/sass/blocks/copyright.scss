@@ -1,3 +1,28 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 164px;
+    padding: 0;
+  }
+
+  & svg {
+    fill: $icon-grey;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .copyright__title {
   font-weight: normal;
   font-size: 16px;

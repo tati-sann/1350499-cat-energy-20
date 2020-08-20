@@ -1,3 +1,49 @@
+.social {
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 130px;
+  }
+}
+
 .social__list {
+  display: flex;
+  width: 130px;
+
   @include no-list;
+  margin: 0 auto;
+  padding: 22px 0 18px;
+  align-items: center;
+}
+
+.social__item {
+  display: block;
+  margin-left: 34px;
+
+  &:nth-child(3n) {
+    margin-left: 40px;
+  }
+
+  &:first-child {
+    margin: 0;
+  }
+
+  & svg {
+    fill: $icon-grey;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $basic-green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
 }

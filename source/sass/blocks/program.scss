@@ -1,13 +1,95 @@
 .program {
-  padding: 21px 20px 18px;
+  position: relative;
+  padding: 30px 20px 18px;
   background-color: $basic-grey;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    border-radius: 50%;
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+  }
+
+  &--pro::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-size: contain;
+    background-position: center top;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 77px 53px 53px;
+    padding: 78px 53px 55px;
+
+    &::before {
+      top: 91px;
+      right: 60px;
+      left: auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 82px;
+      right: 93px;
+      left: auto;
+      width: 140px;
+      height: 192px;
+    }
+
+    &--pro::after {
+      top: 136px;
+      right: 28px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 52px 55px;
+    padding: 41px 52px 60px;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: 41px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: 67px;
+      left: 33px;
+      width: 134px;
+      height: 56px;
+    }
   }
 }
 
@@ -21,7 +103,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    max-width: 380px;
+    max-width: 62%;
     margin-bottom: 25px;
     padding-left: 0;
     font-size: 36px;
@@ -37,42 +119,61 @@
 
 .program__text {
   margin: 0;
-  margin-bottom: 23px;
+  padding-bottom: 22px;
   padding-right: 13px;
+  border-bottom: 1px solid $border-grey;
   font-family: "Arial", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
-    max-width: 377px;
-    margin-bottom: 48px;
+    max-width: 62%;
+    margin-bottom: 41px;
     padding: 0;
+    border: none;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 15px;
   }
 }
 
-.program__text--pro {
-  @media (min-width: $tablet-width) {
-    max-width: 342px;
+.program--pro {
+  & .program__text {
+    @media (min-width: $tablet-width) {
+      max-width: 57%;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 100%;
+    }
   }
 }
 
 .program__link {
+  position: relative;
   display: inline-block;
-  width: 100%;
-  padding-top: 15px;
-  border-top: 1px solid $border-grey;
+  padding-top: 19px;
+  padding-right: 40px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $basic-black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
 
   &:active {
     opacity: 0.3;
@@ -80,12 +181,25 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 10px;
+    padding-right: 56px;
     border: none;
     font-size: 20px;
     line-height: 30px;
+
+    &::after {
+      top: 19px;
+      width: 32px;
+      height: 10px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 5px;
+    padding-right: 59px;
+
+    &::after {
+      top: 20px;
+      width: 32px;
+      height: 10px;
+    }
   }
 }

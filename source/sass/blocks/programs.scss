@@ -1,19 +1,18 @@
 .programs__wrapper {
   display: grid;
   row-gap: 20px;
-  padding: 20px;
-  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     row-gap: 30px;
-    padding: 0 30px;
-    box-sizing: content-box;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    padding: 40px 110px;
-    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }

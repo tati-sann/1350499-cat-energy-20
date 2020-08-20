@@ -21,7 +21,7 @@
       &::before {
         content: "";
         position: absolute;
-        width: 100vw;
+        width: calc(100vw - 6px);
         height: 1px;
         bottom: 0;
         right: 50%;

@@ -2,21 +2,6 @@
   position: relative;
   text-align: center;
 
-  @media (max-width: $mobile-width-only) {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100vw;
-      height: 1px;
-      bottom: 0;
-      right: 50%;
-      left: 50%;
-      margin-right: -50vw;
-      margin-left: -50vw;
-      background-color: $border-nav-grey;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     border: none;
     background-color: $basic-grey;
@@ -27,38 +12,62 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 20px 22px;
+  padding: 18px 20px 24px;
 
   @media (min-width: $tablet-width) {
     position: relative;
     align-items: center;
-    padding: 161px 35px 40px;
+    padding: 161px 37px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 163px;
   }
 }
 
 .product__card {
   display: flex;
-  flex-direction: row;
-  padding-top: 18px;
+  justify-content: space-between;
+  margin-bottom: -5px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 33px;
+    justify-content: center;
+    margin-bottom: 36px;
     padding: 0;
   }
 }
 
 .product__image-link {
+  margin-top: -18px;
+
+  & img {
+    width: 140px;
+    height: 144px;
+  }
+
   @media (min-width: $tablet-width) {
     position: absolute;
     display: none;
   }
 }
 
+.product__information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    align-items: center;
+  }
+}
+
 .product__title {
   display: inline-block;
-  max-width: 80px;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
+  padding-right: 40px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
@@ -66,10 +75,17 @@
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    max-width: 170px;
+    margin-bottom: 12px;
+    padding: 0 45px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+    padding: 0;
+    line-height: 22px;
   }
 }
 
@@ -80,13 +96,14 @@
 .product__button {
   display: inline-block;
   width: 100%;
-  padding: 10px 44px;
+  padding: 10px 20px;
   box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
     width: 248px;
+    padding: 9px 20px;
   }
 
   @media (min-width: $desktop-width) {
