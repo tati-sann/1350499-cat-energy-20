@@ -1,81 +1,73 @@
 .page-header {
   color: $basic-black;
-  border-bottom: 1px solid $border-nav-grey;
-
-  &--index .page-header__logo {
-    pointer-events: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
 
   @media (min-width: $desktop-width) {
     &--index {
       position: relative;
+      background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
+      z-index: 0;
+    }
 
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -2;
-        background-color: $basic-green-dark;
-        width: 50%;
-        height: 695px;
-        top: 0;
-        left: 50%;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        background-image: url("../img/index-background-desktop@1x.jpg");
-        background-size: 720px 699px;
-        width: 720px;
-        height: 695px;
-        top: 0;
-        right: 0;
-      }
+    &--index::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: 720px 699px;
+      width: 720px;
+      height: 699px;
+      top: 0;
+      left: 50%;
     }
   }
 }
 
 .page-header__wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 23px 30px 0;
+    box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 110px;
-    padding-top: 49px;
-    padding-bottom: 32px;
+    padding: 53px 110px 32px;
     box-sizing: border-box;
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .page-header__top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 12px;
+.page-header__top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 66px;
+  padding: 0 20px;
 
-    &--nojs {
-      & .page-header__toggle-menu {
-        display: none;
-      }
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      margin-right: -50vw;
+      margin-left: -50vw;
+      background-color: $border-nav-grey;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    padding: 0;
   }
 }
 
@@ -83,106 +75,19 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    max-width: 440px;
+    width: 440px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 478px;
+    width: 478px;
   }
 }
 
 .page-header__logo {
   display: block;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  & img {
-    width: 190px;
-    height: 38px;
-  }
+  min-height: 38px;
 
   @media (min-width: $tablet-width) {
-    & img {
-      width: 174px;
-      height: 52px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    & img {
-      width: 202px;
-      height: 60px;
-    }
-  }
-}
-
-.page-header__toggle-menu {
-  display: none;
-
-  @media (max-width: $mobile-width-only) {
-    position: relative;
-    display: block;
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-      outline: none;
-    }
-
-    &:active {
-      opacity: 0.1;
-    }
-
-    &--closed {
-      width: 24px;
-      height: 16px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 24px;
-        height: 1.5px;
-        background-color: $basic-black;
-        box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
-      }
-    }
-
-    &--opened {
-      width: 18px;
-      height: 18px;
-      margin-top: 21px;
-      margin-right: 7px;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 24.76px;
-        height: 1.5px;
-        background-color: $basic-black;
-      }
-
-      &::before {
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
-    }
+    width: 174px;
   }
 }

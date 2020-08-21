@@ -3,17 +3,10 @@
   table-layout: fixed;
 }
 
-@media (min-width: $tablet-width) {
-  .price__item {
-    padding-top: 5px;
-  }
-}
-
 .price__quantity {
   width: 70%;
 
   @media (min-width: $tablet-width) {
-    width: 71%;
     text-align: right;
   }
 
@@ -25,8 +18,4 @@
 .price__value {
   width: 30%;
   text-align: right;
-
-  @media (min-width: $tablet-width) {
-    width: 29%;
-  }
 }

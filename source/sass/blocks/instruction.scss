@@ -1,23 +1,23 @@
 .instruction__wrapper {
-  padding-top: 8px;
-  padding-bottom: 45px;
+  padding: 7px 20px 42px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding-top: 26px;
-    padding-bottom: 47px;
+    padding: 45px 30px 47px;
     border-bottom: 1px solid $border-nav-grey;
+    box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 30px;
-    padding-bottom: 11px;
+    padding: 34px 110px 11px;
     border: none;
+    box-sizing: border-box;
   }
 }
 
 .instruction__title {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 38px;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
@@ -31,9 +31,10 @@
 
 .instruction__list {
   display: grid;
-  row-gap: 22px;
+  row-gap: 20px;
 
   @include no-list;
+  padding-left: 80px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -50,61 +51,8 @@
 }
 
 .instruction__item {
-  position: relative;
-  min-height: 60px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: $basic-green;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-  }
-
-  &--nutrients::after {
-    background-image: url("../img/advantage-leaf@1x.png");
-  }
-
-  &--release::after {
-    background-image: url("../img/advantage-powder@1x.png");
-  }
-
-  &--food::after {
-    left: 4px;
-    background-image: url("../img/advantage-dining@1x.png");
-  }
-
-  &--changes::after {
-    background-image: url("../img/advantage-clock@1x.png");
-  }
-
   @media (min-width: $tablet-width) {
-    min-height: 280px;
-
-    &::before {
-      top: 42px;
-      left: 0;
-      width: 80px;
-      height: 80px;
-      background-color: $basic-green;
-    }
-
-    &::after {
-      top: 57px;
-      left: 15px;
-    }
+    padding: 153px 60px 57px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -113,24 +61,14 @@
 }
 
 .instruction__text {
-  display: inline-block;
   margin: 0;
-  padding-top: 3px;
-  padding-left: 80px;
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", "Verdana", sans-serif;
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    padding-top: 154px;
-    padding-right: 60px;
     font-size: 16px;
     line-height: 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 0;
   }
 }
