@@ -13,27 +13,24 @@
 }
 
 .form-program__fieldset {
-  @media (max-width: $mobile-width-only) {
-    &:first-child,
-    &:nth-child(2) {
-      position: relative;
+  &:nth-child(n+3) {
+    position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: calc(100vw - 6px);
-        height: 1px;
-        bottom: 0;
-        right: 50%;
-        left: 50%;
-        margin-right: -50vw;
-        margin-left: -50vw;
-        background-color: $border-nav-grey;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 2px;
+      top: -45px;
+      left: 0;
+      background-color: $basic-green;
     }
   }
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+
     &:first-child {
       margin-bottom: 70px;
     }
@@ -73,8 +70,12 @@
 }
 
 .form-programm__footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
   @media (min-width: $tablet-width) {
-    display: flex;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -86,11 +87,9 @@
 
 .form-program__button {
   display: inline-block;
-  width: 280px;
-  margin: 0 20px;
+  width: 100%;
   margin-bottom: 18px;
-  padding: 9px 44px;
-  box-sizing: border-box;
+  padding: 9px 20px;
   font-size: 16px;
   line-height: 20px;
   font-family: inherit;
@@ -114,7 +113,7 @@
   font-size: 14px;
   line-height: 16px;
   font-family: "Arial", "Verdana", sans-serif;
-  text-align: center;
+
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

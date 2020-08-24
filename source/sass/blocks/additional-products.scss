@@ -14,10 +14,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 70px;
+    padding-top: 65px;
 
     &::before {
-      top: 90px;
+      top: 88px;
     }
   }
 
@@ -27,6 +27,12 @@
 
     &::before {
       top: 35px;
+      right: 50%;
+      left: 50%;
+      width: calc(100vw - 10px);
+      height: 2px;
+      margin-right: -50vw;
+      margin-left: -50vw;
     }
   }
 }
@@ -48,7 +54,7 @@
     padding: 0 36px;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 80px;
+    margin-bottom: 81px;
 
     &::before {
       width: calc(100vw + 148px);

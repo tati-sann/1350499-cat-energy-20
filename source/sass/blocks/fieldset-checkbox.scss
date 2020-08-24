@@ -1,6 +1,5 @@
 .fieldset-checkbox {
   margin: 0;
-  padding: 0 20px;
   border: none;
 
   @media (min-width: $tablet-width) {
@@ -13,6 +12,7 @@
   padding-top: 24px;
   font-size: 24px;
   line-height: 26px;
+  background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
