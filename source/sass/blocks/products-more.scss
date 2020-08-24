@@ -26,11 +26,11 @@
 
   @media (min-width: $tablet-width) {
     align-items: center;
-    padding: 106px 35px 35px;
+    padding: 104px 35px 35px;
     border: none;
 
     &::before {
-      top: 52px;
+      top: 50px;
       left: calc(50% - 30px);
       right: calc(50% - 30px);
       width: 60px;

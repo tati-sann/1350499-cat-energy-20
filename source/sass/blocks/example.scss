@@ -4,6 +4,22 @@
   @media (min-width: $tablet-width) {
     position: relative;
     background-color: transparent;
+    min-height: 1081px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 462px;
+      bottom: 0;
+      left: 0;
+      background-color: $background-grey;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 656px;
 
     &::after {
       content: "";
@@ -19,7 +35,7 @@
 }
 
 .example__wrapper {
-  padding: 0 20px;
+  padding-top: 30px;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
@@ -35,13 +51,12 @@
 .example__title {
   margin: 0;
   margin-bottom: 33px;
-  padding-top: 27px;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
     padding-top: 43px;
     font-size: 60px;
     line-height: 60px;
@@ -56,10 +71,11 @@
 .example__text {
   margin: 0;
   margin-bottom: 25px;
-  font-family: "Arial", "Verdana", sans-serif;
+  padding-right: 10px;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  font-family: "Arial", "Verdana", sans-serif;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;
@@ -91,7 +107,6 @@
 .example__list {
   display: flex;
   justify-content: space-between;
-  row-gap: 10%;
   margin: 0;
   margin-bottom: 27px;
 
@@ -102,12 +117,19 @@
 }
 
 .example__item {
+  position: relative;
   display: inline-block;
-  width: 45%;
+  width: 44%;
+  margin-bottom: 7px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  border: 1px solid $input-border-hover-grey;
+  border-radius: 3px;
 
   @media (min-width: $tablet-width) {
-    width: 162px;
-    margin-right: 42px;
+    width: 161px;
+    margin-right: 40px;
+    padding-bottom: 20px;
   }
 }
 
@@ -116,7 +138,6 @@
 }
 
 .example__value {
-  margin-bottom: 13px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -129,14 +150,32 @@
 }
 
 .example__desc {
+  display: inline-block;
+  position: absolute;
+  bottom: -16px;
+  left: calc(50% - 39.5px);
   margin: 0;
+  width: 77px;
+  padding: 0 10px;
+  box-sizing: border-box;
   font-size: 12px;
   line-height: 12px;
+  font-family: "Arial", "Verdana", sans-serif;
   text-align: center;
+  background-color: $background-grey;
 
   @media (min-width: $tablet-width) {
+    bottom: -5px;
+    left: calc(50% - 64px);
+    width: 130px;
+    padding: 0;
     font-size: 14px;
     line-height: 14px;
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-color: $background-grey;
   }
 }
 
@@ -167,6 +206,8 @@
 }
 
 .example__slider {
+  text-align: center;
+
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;

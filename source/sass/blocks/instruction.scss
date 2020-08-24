@@ -1,6 +1,6 @@
 .instruction__wrapper {
-  padding-top: 8px;
-  padding-bottom: 45px;
+  padding-top: 6px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     padding-top: 26px;
@@ -23,7 +23,7 @@
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -31,14 +31,14 @@
 
 .instruction__list {
   display: grid;
-  row-gap: 22px;
+  row-gap: 20px;
 
   @include no-list;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 59px;
     row-gap: 37px;
     padding: 0;
   }
@@ -52,6 +52,13 @@
 .instruction__item {
   position: relative;
   min-height: 60px;
+  padding-top: 3px;
+  padding-left: 80px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", "Verdana", sans-serif;
+  color: $special-dark-grey;
 
   &::before {
     content: "";
@@ -75,30 +82,54 @@
 
   &--nutrients::after {
     background-image: url("../img/advantage-leaf@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--release::after {
     background-image: url("../img/advantage-powder@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--food::after {
     left: 4px;
     background-image: url("../img/advantage-dining@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--changes::after {
     background-image: url("../img/advantage-clock@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 
   @media (min-width: $tablet-width) {
     min-height: 280px;
+    padding: 0;
+    padding-top: 154px;
+    padding-right: 60px;
+    font-size: 16px;
+    line-height: 24px;
 
     &::before {
       top: 42px;
       left: 0;
       width: 80px;
       height: 80px;
-      background-color: $basic-green;
     }
 
     &::after {
@@ -112,17 +143,7 @@
   }
 }
 
-.instruction__text {
-  display: inline-block;
-  margin: 0;
-  padding-top: 3px;
-  padding-left: 80px;
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "Arial", "Verdana", sans-serif;
-  color: $special-dark-grey;
-
-  @media (min-width: $tablet-width) {
+/*  @media (min-width: $tablet-width) {
     padding: 0;
     padding-top: 154px;
     padding-right: 60px;
@@ -133,4 +154,4 @@
   @media (min-width: $desktop-width) {
     padding-right: 0;
   }
-}
+}*/
