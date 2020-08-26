@@ -1,60 +1,86 @@
 .fieldset-text {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   border: none;
+}
 
-  &--cat {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-bottom: 23px;
-    border-bottom: 1px solid $border-nav-grey;
+.fieldset-text__wrapper {
+  padding: 0 20px;
 
-    @media (min-width: $tablet-width) {
-      border: none;
-    }
+  @media (min-width: $tablet-width) {
+    padding-left: 70px;
+    padding-right: 68px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.fieldset-text--cat .fieldset-text__wrapper {
+  padding-top: 9px;
+  padding-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
 }
 
-.fieldset-text__legend {
-  max-width: 205px;
-  margin-bottom: 32px;
+.fieldset-text--owner .fieldset-text__wrapper {
   padding-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+  }
+}
+
+.fieldset-text__legend {
+  max-width: 221px;
+  margin-left: -20px;
+  padding-left: 20px;
+  margin-bottom: 32px;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    max-width: 100%;
+    margin-left: -39px;
+    padding-left: 39px;
+    padding-right: 41px;
+    margin-bottom: 75px;
     font-size: 36px;
     line-height: 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 65px;
   }
 }
 
 .fieldset-text__list {
   display: grid;
-  row-gap: 13px;
+  row-gap: 14px;
 
   @include no-list;
 
   @media (min-width: $tablet-width) {
-    row-gap: 16px;
+    row-gap: 18px;
   }
 }
 
-.fieldset-text--owner .fieldset-text__list {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+.fieldset-text--owner {
+  & .fieldset-text__input {
+    padding-left: 14px;
+  }
+
+  & .fieldset-text__list {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
   }
 }
 
@@ -72,7 +98,7 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
-    margin-right: 16px;
+    margin-right: 20px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -80,7 +106,10 @@
 
 .fieldset-text__input {
   flex-grow: 1;
-  padding: 13px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-left: 17px;
+  padding-right: 0;
   box-sizing: border-box;
   border: 1px solid $input-border-grey;
   appearance: textfield;
@@ -100,8 +129,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 25px;
+    padding-left: 18px;
     padding-top: 10px;
+    padding-bottom: 12px;
   }
 }
 

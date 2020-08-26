@@ -33,7 +33,7 @@
 }
 
 .promo__wrapper {
-  padding-top: 27px;
+  padding-top: 28px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -44,8 +44,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 590px;
-    padding-top: 78px;
+    min-height: 594px;
+    padding-top: 81px;
   }
 }
 
@@ -67,7 +67,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 50%;
-    margin-bottom: 38px;
+    margin-bottom: 42px;
     margin-left: 80px;
     box-sizing: border-box;
   }
@@ -75,7 +75,7 @@
 
 .promo__slogan {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -113,7 +113,7 @@
 .promo__button {
   display: inline-block;
   width: 100%;
-  padding: 11px 26px;
+  padding: 12px 26px;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 18px;

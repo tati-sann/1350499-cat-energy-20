@@ -1,13 +1,43 @@
+.slider {
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
 .slider__list {
   @include no-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .slider__item {
-  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+    overflow: hidden;
+
+    & img {
+      display: block;
+      max-width: 690px;
+      width: 690px;
+    }
+  }
 }
 
-.slider__item--active {
+.slider__item--before {
   display: block;
+}
+
+.slider__item--after {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    direction: rtl;
+  }
 }
 
 .slider__button {
