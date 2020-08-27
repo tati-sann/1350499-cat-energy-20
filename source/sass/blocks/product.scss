@@ -28,7 +28,8 @@
 .product__card {
   display: flex;
   justify-content: space-between;
-  margin-bottom: -5px;
+  flex-wrap: wrap;
+  margin-bottom: -4px;
 
   @media (min-width: $tablet-width) {
     justify-content: center;
@@ -38,7 +39,7 @@
 }
 
 .product__image-link {
-  margin-top: -18px;
+  margin-top: -16px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -47,7 +48,15 @@
     margin-left: -20px;
 
     &--big {
-      top: -55px;
+      top: -58px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -39px;
+
+      &--big {
+        top: -62px;
+      }
     }
   }
 }
@@ -68,6 +77,7 @@
   display: inline-block;
   margin: 0;
   margin-bottom: 14px;
+  padding-top: 2px;
   padding-right: 40px;
   font-weight: normal;
   font-size: 16px;
