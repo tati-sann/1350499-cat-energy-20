@@ -68,49 +68,37 @@
     width: 60px;
     height: 60px;
     background-color: $basic-green;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 50px;
-    height: 50px;
     background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center center;
   }
 
-  &--nutrients::after {
+  &--nutrients::before {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-leaf@2x.png");
     }
   }
 
-  &--release::after {
+  &--release::before {
     background-image: url("../img/advantage-powder@1x.png");
-    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-powder@2x.png");
     }
   }
 
-  &--food::after {
-    left: 4px;
+  &--food::before {
     background-image: url("../img/advantage-dining@1x.png");
-    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-dining@2x.png");
     }
   }
 
-  &--changes::after {
+  &--changes::before {
     background-image: url("../img/advantage-clock@1x.png");
-    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-clock@2x.png");
@@ -133,25 +121,44 @@
     }
 
     &::after {
-      top: 57px;
-      left: 15px;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 77px;
+      color: $basic-grey;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: "Oswald", "Arial", sans-serif;
+    }
+
+    &:first-child::after {
+      content: "1";
+      right: 95px;
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
+
+    &::after {
+      right: 0;
+    }
+
+    &:first-child::after {
+      right: 18px;
+    }
   }
 }
-
-/*  @media (min-width: $tablet-width) {
-    padding: 0;
-    padding-top: 154px;
-    padding-right: 60px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 0;
-  }
-}*/

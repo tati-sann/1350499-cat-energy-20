@@ -41,6 +41,10 @@
     background-image: url("../img/bg-map-tablet@1x.png");
     background-size: cover;
 
+    & iframe {
+      height: 400px;
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-map-tablet@2x.png");
     }

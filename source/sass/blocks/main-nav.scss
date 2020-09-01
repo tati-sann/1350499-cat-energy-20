@@ -5,8 +5,8 @@
   text-transform: uppercase;
 
   @media (max-width: $mobile-width-only) {
-    &--nojs,
-    &--opened {
+    &,
+    &--nojs {
       display: block;
     }
 
