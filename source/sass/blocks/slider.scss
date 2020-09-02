@@ -134,6 +134,7 @@
 @media (min-width: $tablet-width) {
   .slider__toggle {
     position: relative;
+    top: 0;
     width: 8px;
     height: 8px;
     background-color: $basic-green;
