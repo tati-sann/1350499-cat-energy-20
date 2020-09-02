@@ -95,6 +95,7 @@
 }
 
 .slider__scale {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 6px;
@@ -119,8 +120,9 @@
   height: 6px;
   background-color: $basic-green;
   border-radius: 6px;
+  transform: translateX(0);
 
-  &--before {
+  &--after {
     transform: translateX(100%);
   }
 
@@ -130,16 +132,10 @@
 }
 
 @media (min-width: $tablet-width) {
-  .slider__range {
-    position: relative;
-  }
-
   .slider__toggle {
-    position: absolute;
-    top: -15px;
+    position: relative;
     width: 8px;
     height: 8px;
-    margin-left: -15px;
     background-color: $basic-green;
     border: 13px solid $basic-white;
     filter: drop-shadow(0 1px 3px rgba($basic-black, 0.16));
