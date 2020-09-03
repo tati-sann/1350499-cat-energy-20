@@ -1,5 +1,6 @@
 .contacts {
   background-color: $basic-white;
+  overflow-x: hidden;
 
   &--catalog,
   &--form {
@@ -20,17 +21,19 @@
 .contacts__address {
   @media (min-width: $desktop-width) {
     position: absolute;
+    z-index: 1;
     top: 95px;
     left: 110px;
   }
 }
 
 .contacts__map {
-  width: 100%;
-  min-height: 362px;
+  width: 100vw;
+  height: 362px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: contain;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
@@ -38,12 +41,8 @@
 
   @media (min-width: $tablet-width) {
     min-height: 400px;
+    background-color: $basic-grey;
     background-image: url("../img/bg-map-tablet@1x.png");
-    background-size: cover;
-
-    & iframe {
-      height: 400px;
-    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-map-tablet@2x.png");

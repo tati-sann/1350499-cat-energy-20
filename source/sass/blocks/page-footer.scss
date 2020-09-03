@@ -9,7 +9,7 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 39px;
+  padding-top: 37px;
   padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
@@ -30,7 +30,7 @@
 .page-footer__logo {
   display: inline-block;
   width: 100%;
-  padding-bottom: 26px;
+  padding-bottom: 28px;
   border-bottom: 1px solid $border-fieldset-grey;
   text-align: center;
 

@@ -13,20 +13,20 @@
 
   @include no-list;
   margin: 0 auto;
-  padding: 22px 0 18px;
+  padding: 23px 0;
   align-items: center;
 }
 
 .social__item {
   display: block;
-  margin-left: 34px;
+  margin-left: 35px;
 
   &:nth-child(3n) {
     margin-left: 40px;
   }
 
   &:first-child {
-    margin: 0;
+    margin-left: -2px;
   }
 }
 

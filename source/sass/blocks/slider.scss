@@ -17,7 +17,7 @@
   @media (max-width: $mobile-width-only) {
     display: none;
     width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 29px;
 
     &--active {
       display: block;
@@ -83,7 +83,7 @@
     border: none;
   }
 
-  &--after {
+  &--before {
     margin-left: 4px;
   }
 
@@ -94,62 +94,67 @@
   }
 }
 
-.slider__scale {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 6px;
-  width: 84px;
-  height: 14px;
-  background-color: $basic-white;
-  border: 1px solid $input-border-hover-grey;
-  border-radius: 6px;
-  box-sizing: border-box;
+@media (max-width: $mobile-width-only) {
+  .slider__scale {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    width: 84px;
+    height: 14px;
+    background-color: $basic-white;
+    border: 1px solid $input-border-hover-grey;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .slider__bar {
+    width: 35px;
+    height: 6px;
+    background-color: $basic-green;
+    border-radius: 6px;
+    transform: translateX(0);
+    transition: 0.3s;
+
+    &--after {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.slider__range {
+  display: none;
 
   @media (min-width: $tablet-width) {
+    display: block;
+    appearance: none;
     width: 428px;
     height: 6px;
-    padding: 0;
     background-color: $scale-grey;
-    border: none;
-  }
-}
+    border-radius: 6px;
+    cursor: pointer;
 
-.slider__bar {
-  width: 35px;
-  height: 6px;
-  background-color: $basic-green;
-  border-radius: 6px;
-  transform: translateX(0);
-
-  &--after {
-    transform: translateX(100%);
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .slider__toggle {
-    position: relative;
-    top: 0;
-    width: 8px;
-    height: 8px;
-    background-color: $basic-green;
-    border: 13px solid $basic-white;
-    filter: drop-shadow(0 1px 3px rgba($basic-black, 0.16));
-    border-radius: 50%;
-
-    &:hover,
     &:focus {
       outline: none;
-      filter: drop-shadow(0 2px 4px rgba($basic-black, 0.19));
     }
 
-    &:active {
-      box-shadow: 0 0 0 1px $basic-green;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 8px;
+      height: 8px;
+      background-color: $basic-green;
+      border: 13px solid $basic-white;
+      filter: drop-shadow(0 1px 3px rgba($basic-black, 0.16));
+      border-radius: 50%;
+      box-sizing: content-box;
+
+      &:hover {
+        filter: drop-shadow(0 2px 4px rgba($basic-black, 0.19));
+      }
+
+      &:active {
+        box-shadow: 0 0 0 1px $basic-green;
+      }
     }
   }
 }

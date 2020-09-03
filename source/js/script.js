@@ -1,20 +1,7 @@
-/*Меню-->*/
+/*Меню-бургер-->*/
 let toggleMenu = document.querySelector(".page-header__toggle-menu");
 let mainMenu = document.querySelector(".main-nav");
-/*<--Меню*/
-/*Слайдер-->*/
-let rangeControls = document.querySelector(".slider__range-controls");
-let butAfter = rangeControls.querySelector(".slider__button--after");
-let butBefore = rangeControls.querySelector(".slider__button--before");
-let sliderScale = rangeControls.querySelector(".slider__scale");
-let sliderBar = sliderScale.querySelector(".slider__bar");
-let sliderTog = sliderScale.querySelector (".slider__toggle");
-let img = document.querySelector(".slider__item");
-let imgBefore = document.querySelector(".slider__item--before");
-let imgAfter = document.querySelector(".slider__item--after");
-/*<--Слайдер*/
 
-/*Меню -->*/
 toggleMenu.classList.remove("page-header__toggle-menu--nojs");
 toggleMenu.classList.add("page-header__toggle-menu--closed");
 
@@ -27,107 +14,87 @@ toggleMenu.addEventListener("click", function(evt) {
   toggleMenu.classList.toggle("page-header__toggle-menu--opened");
   mainMenu.classList.toggle("main-nav--closed");
 });
-/*<--Меню*/
+/*<--Меню-бургер*/
+
+/*Карта-->*/
+ymaps.ready(function () {
+  const viewportWidth = window.innerWidth;
+  var myMap = new ymaps.Map(document.querySelector(".contacts__map"), {
+          center: [59.93863106, 30.3230545],
+          zoom: 17,
+          controls: ["zoomControl"]
+      }, {
+          searchControlProvider: "yandex#search"
+      }),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: "Cat Energy",
+          balloonContent: "Санкт-Петербург, Большая Конюшенная 18/9"
+      }, {
+          iconLayout: "default#image",
+          iconImageHref: "img/map-pin.png",
+          iconImageSize: viewportWidth > 767 ? [124, 106] : [62, 53],
+          iconImageOffset: viewportWidth > 767 ? [-64, -100] : [-32, -55]
+      });
+
+  myMap.geoObjects.add(myPlacemark);
+});
+/*<--Карта*/
+
 /*Слайдер-->*/
-if (document.documentElement.clientWidth < 767) {
-  imgBefore.style.width = "100%";
-  imgAfter.style.width = "100%";
+function slider() {
+  let slider = document.querySelector(".slider");
+  let btnBefore = slider.querySelector(".slider__button--before");
+  let btnAfter = slider.querySelector(".slider__button--after");
+  let img = slider.querySelector(".slider__item");
+  let imgBefore = slider.querySelector(".slider__item--before");
+  let imgAfter = slider.querySelector(".slider__item--after");
+  let bar = slider.querySelector(".slider__bar");
+  let range = slider.querySelector(".slider__range");
 
-  butBefore.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    sliderBar.classList.remove("slider__bar--after");
-    imgAfter.classList.remove("slider__item--active");
-    imgBefore.classList.add("slider__item--active");
-  });
-
-  butAfter.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    sliderBar.classList.add("slider__bar--after");
-    imgBefore.classList.remove("slider__item--active");
-    imgAfter.classList.add("slider__item--active");
-  });
-} else {
-  butBefore.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    imgBefore.style.width = "100%";
-    imgAfter.style.width = "0%";
-    sliderTog.style.left = "0";
-  });
-
-  butAfter.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    imgAfter.style.width = "100%";
-    imgBefore.style.width = "0%";
-   sliderTog.style.left = "393px";
-  });
-}
-
-window.onresize = function(evt) {
   if (document.documentElement.clientWidth < 767) {
     imgBefore.style.width = "100%";
     imgAfter.style.width = "100%";
 
-  butBefore.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    sliderBar.classList.remove("slider__bar--after");
-    imgAfter.classList.remove("slider__item--active");
-    imgBefore.classList.add("slider__item--active");
-  });
-
-  butAfter.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    sliderBar.classList.add("slider__bar--after");
-    imgBefore.classList.remove("slider__item--active");
-    imgAfter.classList.add("slider__item--active");
-  });
-  } else {
-    butBefore.addEventListener("click", function(evt) {
+    btnBefore.addEventListener("click", function (evt) {
       evt.preventDefault();
+      bar.classList.remove("slider__bar--after");
+      imgAfter.classList.remove("slider__item--active");
+      imgBefore.classList.add("slider__item--active");
+    });
+
+    btnAfter.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      bar.classList.add("slider__bar--after");
+      imgBefore.classList.remove("slider__item--active");
+      imgAfter.classList.add("slider__item--active");
+    });
+  } else {
+    btnBefore.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      range.value = 0;
       imgBefore.style.width = "100%";
       imgAfter.style.width = "0%";
-      sliderTog.style.left = "0";
     });
 
-    butAfter.addEventListener("click", function(evt) {
-      evt.preventDefault();
+    btnAfter.addEventListener("click", function (evt) {
+      range.value = 100;
       imgAfter.style.width = "100%";
       imgBefore.style.width = "0%";
-      sliderTog.style.left = "393px";
+    });
+
+    range.addEventListener("input", function() {
+      imgBefore.style.width = (100 - range.value) + "%";
+      imgAfter.style.width = range.value + "%";
     });
   }
-};
+}
 
-/*ползунок*/
-sliderTog.onmousedown = function(evt) {
-  event.preventDefault();
-  let shiftX = event.clientX - sliderTog.getBoundingClientRect().left;
+if (document.querySelector(".slider")) {
+  slider();
 
-  document.addEventListener("mousemove", onMouseMove);
-  document.addEventListener("mouseup", onMouseUp);
-
-  function onMouseMove(event) {
-    let newLeft = event.clientX - shiftX - sliderScale.getBoundingClientRect().left;
-
-    if (newLeft < 0) {
-      newLeft = 0;
-    }
-
-    let rightEdge = sliderScale.offsetWidth - sliderTog.offsetWidth;
-
-    if (newLeft > rightEdge) {
-      newLeft = rightEdge;
-    }
-
-    sliderTog.style.left = newLeft + "px";
-  }
-
-  function onMouseUp() {
-    document.removeEventListener("mouseup", onMouseUp);
-    document.removeEventListener("mousemove", onMouseMove);
-  }
-
-  sliderTog.ondragstart = function() {
-    return false;
+  window.onresize = function(evt) {
+    slider();
   }
 };
 /*<--Слайдер*/
