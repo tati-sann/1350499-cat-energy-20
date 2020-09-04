@@ -2,14 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 22px;
+  padding-top: 17px;
+  cursor: pointer;
 
-  @media (min-width: $tablet-width) {
-    width: 164px;
-    padding: 0;
+  &:hover,
+  &:focus {
+    outline: none;
   }
 
   & svg {
+    width: 40px;
+    height: 40px;
+    margin-right: -6px;
     fill: $icon-grey;
   }
 
@@ -20,6 +24,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 164px;
+    padding: 0;
   }
 }
 

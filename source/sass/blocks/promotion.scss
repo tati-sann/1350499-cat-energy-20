@@ -1,9 +1,9 @@
 .promotion {
-  position: relative;
   min-height: 289px;
   margin-top: 39px;
   margin-bottom: 35px;
   text-align: center;
+  color: $basic-white;
   background-color: $basic-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -15,7 +15,9 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: 708px;
     min-height: 200px;
+    margin: 0 auto;
     margin-top: 68px;
     margin-bottom: 74px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
@@ -37,30 +39,57 @@
   }
 }
 
+.promotion__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 61px 58px 10px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 61px 90px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 61px 40px 10px;
+  }
+}
+
+.promotion__image {
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
 .promotion__text {
   display: inline-block;
   margin: 0;
-  padding: 0 57px;
-  padding-top: 186px;
+  padding: 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   font-family: "Arial", "Verdana", sans-serif;
   text-align: center;
-  color: $basic-white;
 
   @media (min-width: $tablet-width) {
     max-width: 161px;
-    float: right;
-    padding: 0;
-    padding-top: 71px;
-    padding-right: 124px;
     text-align: left;
+    padding-top: 11px;
+    padding-right: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 187px 41px 0;
-    float: none;
     text-align: center;
+    padding: 0;
   }
 }

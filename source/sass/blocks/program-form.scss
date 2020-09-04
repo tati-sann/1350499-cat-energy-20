@@ -35,7 +35,7 @@
 .program-form__text {
   display: inline-block;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -43,13 +43,13 @@
   @media (min-width: $tablet-width) {
     max-width: 323px;
     padding-left: 40px;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
     font-size: 20px;
     line-height: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 62px;
+    margin-bottom: 65px;
     padding: 0;
   }
 }
