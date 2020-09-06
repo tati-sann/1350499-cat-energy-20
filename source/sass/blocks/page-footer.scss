@@ -16,13 +16,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 47px 30px;
+    padding: 38px 30px;
     box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 110px;
-    padding: 47px 110px;
+    padding: 40px 110px;
     box-sizing: border-box;
   }
 }
@@ -30,7 +30,7 @@
 .page-footer__logo {
   display: inline-block;
   width: 100%;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
   border-bottom: 1px solid $border-fieldset-grey;
   text-align: center;
 
@@ -40,7 +40,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 128px;
+    min-width: 128px;
+    max-width: 128px;
     padding: 0;
     border: none;
   }

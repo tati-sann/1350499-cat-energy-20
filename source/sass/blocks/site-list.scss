@@ -15,8 +15,17 @@
   padding-bottom: 23px;
   margin-left: -20px;
   margin-right: -20px;
-  border-top: 1px solid $border-nav-grey;
+  border-bottom: 1px solid $border-nav-grey;
   text-align: center;
+
+  &:first-child {
+    border-top: 1px solid $border-nav-grey;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+      border-top: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -28,12 +37,6 @@
   @media (min-width: $desktop-width) {
     margin-left: 34px;
     padding: 4px 0;
-  }
-}
-
-.site-list__item:first-child {
-  @media (min-width: $tablet-width) {
-    margin-left: 0;
   }
 }
 

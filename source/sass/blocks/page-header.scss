@@ -1,6 +1,6 @@
 .page-header {
+  position: relative;
   color: $basic-black;
-  border-bottom: 1px solid $border-nav-grey;
 
   &--index .page-header__logo {
     pointer-events: none;
@@ -74,7 +74,7 @@
     align-items: center;
     width: 100%;
     padding-top: 11px;
-    padding-bottom: 13px;
+    padding-bottom: 14px;
 
     &--nojs {
       & .page-header__toggle-menu {
@@ -192,6 +192,20 @@
       &::after {
         transform: rotate(-45deg);
       }
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header__main-nav {
+    position: absolute;
+    z-index: 1;
+    top: 64px;
+    left: 0;
+    background-color: $basic-white;
+
+    &--nojs {
+      position: static;
     }
   }
 }
