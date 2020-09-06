@@ -376,8 +376,7 @@ img {
 
 .page-header {
   position: relative;
-  color: #000000;
-  border-bottom: 1px solid #e6e6e6; }
+  color: #000000; }
   .page-header--index .page-header__logo {
     pointer-events: none; }
   @media (min-width: 768px) {
@@ -436,7 +435,7 @@ img {
     align-items: center;
     width: 100%;
     padding-top: 11px;
-    padding-bottom: 13px; }
+    padding-bottom: 14px; }
     .page-header__top--nojs .page-header__toggle-menu {
       display: none; } }
 
@@ -621,8 +620,14 @@ img {
   padding-bottom: 23px;
   margin-left: -20px;
   margin-right: -20px;
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   text-align: center; }
+  .site-list__item:first-child {
+    border-top: 1px solid #e6e6e6; }
+    @media (min-width: 768px) {
+      .site-list__item:first-child {
+        margin-left: 0;
+        border-top: none; } }
   @media (min-width: 768px) {
     .site-list__item {
       margin: 0;
@@ -633,10 +638,6 @@ img {
     .site-list__item {
       margin-left: 34px;
       padding: 4px 0; } }
-
-@media (min-width: 768px) {
-  .site-list__item:first-child {
-    margin-left: 0; } }
 
 .site-list__item a {
   opacity: 1; }
@@ -2746,5 +2747,3 @@ img {
 
 .fieldset--checkbox .fieldset__input:disabled + .fieldset__name {
   opacity: 0.3; }
-
-/*# sourceMappingURL=style.css.map */
