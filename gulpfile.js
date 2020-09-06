@@ -27,6 +27,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer(),
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename({
       suffix: ".min"
@@ -63,6 +65,7 @@ exports.html = html;
 const js = () => {
   return gulp.src("source/js/script.js")
     .pipe(plumber())
+    .pipe(gulp.dest("build/js"))
     .pipe(minify({
       minify: true,
       minifyJS: {
@@ -115,8 +118,6 @@ const copy = () => {
   return gulp.src([
   "source/fonts/**/*.{woff,woff2}",
   "source/img/**/*",
-  "source/css/**/*",
-  "source/js/**/*",
   "source/*.ico"
 ], {
   base: "source"
@@ -157,7 +158,7 @@ const watcher = () => {
 }
 
 const build = gulp.series (
-  clean, copy, sprite, styles, js, html
+  clean, copy, styles, js, html
 );
 
 exports.build = build;
