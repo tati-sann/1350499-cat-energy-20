@@ -83,6 +83,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 240px;
+  }
 }
 
 .additional-product__link {

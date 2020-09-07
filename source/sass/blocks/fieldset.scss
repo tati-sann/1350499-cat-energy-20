@@ -45,6 +45,7 @@
 .fieldset__wrapper {
   padding: 0 20px;
   padding-top: 20px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     padding-left: 70px;
@@ -63,25 +64,28 @@
   }
 }
 
-
-.fieldset__legend {
-  max-width: 221px;
+.fieldset__title {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 32px;
   margin-left: -20px;
   padding-left: 20px;
-  margin-bottom: 32px;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    max-width: 100%;
     margin-left: -39px;
     padding-left: 39px;
     padding-right: 41px;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 20;
   }
 }
 
@@ -124,6 +128,12 @@
   &::-webkit-inner-spin-button {
     appearance: none;
   }
+
+  &:required,
+  &--error {
+    border-color: $input-valid;
+    fill: $input-valid;
+  }
 }
 
 .fieldset__input,
@@ -149,7 +159,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding-bottom: 45px;
+      padding-top: 18px;
+      padding-bottom: 46px;
     }
   }
 
@@ -163,6 +174,14 @@
 
   & ~ .fieldset--owner .fieldset__wrapper {
     padding-bottom: 6px;
+  }
+
+  & ~ .fieldset--owner .fieldset__title {
+    max-width: 200px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+    }
   }
 
   & .fieldset__list {
@@ -191,8 +210,32 @@
   & .fieldset__name {
     margin-right: 14px;
 
+    &--weight {
+      margin-right: 16px;
+    }
+
+    &--email {
+      margin-right: 10px;
+    }
+
+    &--tel {
+      margin-right: 8px;
+    }
+
     @media (min-width: $tablet-width) {
-      margin-right: 20px;
+      margin-right: 18px;
+
+      &--weight {
+        margin-right: 20px;
+      }
+
+      &--email {
+        margin-right: 20px;
+      }
+
+      &--tel {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -200,14 +243,22 @@
     flex-grow: 1;
     padding-top: 12px;
     padding-bottom: 13px;
-    padding-left: 17px;
-    padding-right: 0;
+    padding-left: 14px;
+    padding-right: 5px;
     box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
       padding-left: 18px;
       padding-top: 10px;
       padding-bottom: 12px;
+    }
+  }
+
+  & ~ .fieldset--owner .fieldset__input {
+    padding-left: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 20px;
     }
   }
 
@@ -224,15 +275,20 @@
     }
 
     &--tel {
+      right: 13px;
       width: 20px;
       height: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      right: 16px;
     }
   }
 }
 
 .fieldset--radio {
   & .fieldset__wrapper {
-    padding-bottom: 21px;
+    padding-bottom: 22px;
 
     @media (min-width: $tablet-width) {
       margin-left: 70px;
@@ -313,19 +369,34 @@
       height: 18px;
     }
   }
+
+  & .fieldset__input:hover + .fieldset__name::after,
+  & .fieldset__input:focus + .fieldset__name::after {
+    border-color: $input-hover-grey;
+  }
+
+  & .fieldset__input:disabled + .fieldset__name {
+    opacity: 0.3;
+  }
 }
 
 .fieldset--textarea {
   & .fieldset__wrapper {
-    padding-bottom: 4px;
+    padding-top: 22px;
+    padding-bottom: 6px;
 
     @media (min-width: $tablet-width) {
-      padding-bottom: 45px;
+      padding-top: 20px;
+      padding-bottom: 43px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 46px;
     }
   }
 
-  & .fieldset__legend {
-    margin-bottom: 35px;
+  & .fieldset__title {
+    margin-bottom: 33px;
     padding-right: 21px;
 
     @media (min-width: $tablet-width) {
@@ -350,18 +421,18 @@
 
 .fieldset--checkbox {
   & .fieldset__wrapper {
-    padding-bottom: 34px;
+    padding-bottom: 35px;
 
     @media (min-width: $tablet-width) {
       padding-bottom: 53px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-bottom: 30px;
+      padding-bottom: 60px;
     }
   }
 
-  & .fieldset__legend {
+  & .fieldset__title {
     margin-bottom: 33px;
     padding-right: 23px;
 
@@ -372,7 +443,7 @@
   }
 
   & .fieldset__list {
-    row-gap: 13px;
+    row-gap: 12px;
 
     @media (min-width: $tablet-width) {
       grid-template-columns: 1fr 1fr;
@@ -436,5 +507,14 @@
       top: 12px;
       left: 14px;
     }
+  }
+
+  & .fieldset__input:hover + .fieldset__name::after,
+  & .fieldset__input:focus + .fieldset__name::after {
+    border-color: $input-hover-grey;
+  }
+
+  & .fieldset__input:disabled + .fieldset__name {
+    opacity: 0.3;
   }
 }

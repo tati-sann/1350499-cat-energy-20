@@ -45,6 +45,7 @@
   @media (min-width: $desktop-width) {
     position: relative;
     padding-top: 60px;
+    padding-bottom: 0;
   }
 }
 
@@ -87,7 +88,7 @@
   }
 }
 
-.examle__statistics {
+.example__statistics {
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {

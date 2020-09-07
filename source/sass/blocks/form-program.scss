@@ -13,15 +13,6 @@
       grid-column-start: 1;
       grid-column-end: 3;
     }
-
-    &:first-child,
-    &:nth-child(2) {
-      margin-bottom: 0;
-    }
-
-    &:nth-child(5) {
-      margin-bottom: 30px;
-    }
   }
 }
 
@@ -48,8 +39,8 @@
 .form-program__button {
   display: inline-block;
   width: 100%;
-  margin-bottom: 21px;
-  padding: 9px 10px;
+  margin-bottom: 19px;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
   font-family: inherit;
@@ -58,7 +49,7 @@
     width: 282px;
     margin: 0;
     margin-left: 40px;
-    margin-right: 65px;
+    margin-right: 62px;
     padding: 16px 20px;
     font-size: 20px;
   }
@@ -66,7 +57,7 @@
   @media (min-width: $desktop-width) {
     width: 568px;
     margin-left: 0;
-    margin-right: 80px;
+    margin-right: 82px;
   }
 }
 
@@ -78,8 +69,13 @@
 
 
   @media (min-width: $tablet-width) {
+    margin-top: -7px;
     font-size: 20px;
     line-height: 20px;
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }

@@ -1,10 +1,12 @@
 /*Меню-бургер-->*/
 let toggleMenu = document.querySelector(".page-header__toggle-menu");
 let mainMenu = document.querySelector(".main-nav");
+let pageMenu = document.querySelector(".page-header__main-nav")
 
 toggleMenu.classList.remove("page-header__toggle-menu--nojs");
 toggleMenu.classList.add("page-header__toggle-menu--closed");
 
+pageMenu.classList.remove("page-header__main-nav--nojs");
 mainMenu.classList.remove("main-nav--nojs");
 mainMenu.classList.add("main-nav--closed");
 
@@ -46,7 +48,6 @@ function slider() {
   let slider = document.querySelector(".slider");
   let btnBefore = slider.querySelector(".slider__button--before");
   let btnAfter = slider.querySelector(".slider__button--after");
-  let img = slider.querySelector(".slider__item");
   let imgBefore = slider.querySelector(".slider__item--before");
   let imgAfter = slider.querySelector(".slider__item--after");
   let bar = slider.querySelector(".slider__bar");
@@ -98,3 +99,55 @@ if (document.querySelector(".slider")) {
   }
 };
 /*<--Слайдер*/
+/*Форма-->*/
+function validateForm() {
+  let form = document.querySelector(".form-program");
+  let name = document.querySelector(".fieldset__input--name");
+  let weight = document.querySelector(".fieldset__input--weight");
+  let email = document.querySelector(".fieldset__input--email");
+  let tel = document.querySelector(".fieldset__input--tel");
+
+  name.removeAttribute("required");
+  weight.removeAttribute("required");
+  email.removeAttribute("required");
+  tel.removeAttribute("required");
+
+  form.addEventListener("submit", function(evt) {
+    if (!name.value || !weight.value || !email.value || !tel.value) {
+      evt.preventDefault();
+
+      if (!tel.value) {
+        tel.classList.add("fieldset__input--error");
+        tel.focus();
+        } else {
+          tel.classList.remove("fieldset__input--error");
+        }
+
+      if (!email.value) {
+        email.classList.add("fieldset__input--error");
+        email.focus();
+        } else {
+          email.classList.remove("fieldset__input--error");
+        }
+
+      if (!weight.value) {
+        weight.classList.add("fieldset__input--error");
+        weight.focus();
+        } else {
+          weight.classList.remove("fieldset__input--error");
+        }
+
+      if (!name.value) {
+        name.classList.add("fieldset__input--error");
+        name.focus();
+      }  else {
+        name.classList.remove("fieldset__input--error");
+      }
+    }
+  });
+}
+
+if (document.querySelector(".form-program")) {
+  validateForm();
+};
+/*<--Форма*/

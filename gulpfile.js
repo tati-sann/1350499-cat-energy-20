@@ -27,6 +27,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer(),
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename({
       suffix: ".min"
@@ -63,6 +65,7 @@ exports.html = html;
 const js = () => {
   return gulp.src("source/js/script.js")
     .pipe(plumber())
+    .pipe(gulp.dest("build/js"))
     .pipe(minify({
       minify: true,
       minifyJS: {
@@ -104,7 +107,7 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
@@ -155,7 +158,7 @@ const watcher = () => {
 }
 
 const build = gulp.series (
-  clean, images, Webp, sprite, copy, styles, js, html
+  clean, copy, styles, js, html
 );
 
 exports.build = build;
