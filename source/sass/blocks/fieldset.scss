@@ -116,7 +116,6 @@
   }
 
   &:focus {
-    outline: none;
     border-color: $special-dark-grey;
   }
 
@@ -129,7 +128,7 @@
     appearance: none;
   }
 
-  &:required,
+  &:required:invalid,
   &--error {
     border-color: $input-valid;
     fill: $input-valid;
@@ -370,13 +369,17 @@
     }
   }
 
-  & .fieldset__input:hover + .fieldset__name::after,
-  & .fieldset__input:focus + .fieldset__name::after {
+  & .fieldset__input:hover + .fieldset__name::after {
     border-color: $input-hover-grey;
+  }
+
+  & .fieldset__input:focus + .fieldset__name::after {
+    border-color: $special-dark-grey;
   }
 
   & .fieldset__input:disabled + .fieldset__name {
     opacity: 0.3;
+    pointer-events: none;
   }
 }
 
@@ -509,12 +512,16 @@
     }
   }
 
-  & .fieldset__input:hover + .fieldset__name::after,
-  & .fieldset__input:focus + .fieldset__name::after {
+  & .fieldset__input:hover + .fieldset__name::after {
     border-color: $input-hover-grey;
+  }
+
+  & .fieldset__input:focus + .fieldset__name::after {
+    border-color: $special-dark-grey;
   }
 
   & .fieldset__input:disabled + .fieldset__name {
     opacity: 0.3;
+    pointer-events: none;
   }
 }

@@ -28,7 +28,7 @@
     display: block;
     width: 50%;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     &--after {
       direction: rtl;
@@ -39,10 +39,28 @@
       max-width: 690px;
       width: 690px;
     }
+
+    &--before img {
+      margin-left: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 42px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+
+    &--before img {
+      max-width: 660px;
+      width: 660px;
+      height: 517px;
+      margin-left: 0;
+    }
+
+    &--after img {
+      max-width: 750px;
+      width: 750px;
+      height: 517px;
+    }
   }
 }
 
@@ -64,7 +82,6 @@
 .slider__button {
   display: inline-block;
   padding: 0;
-  padding-bottom: 1px;
   border: none;
   font-size: 16px;
   line-height: 20px;
@@ -92,6 +109,10 @@
     margin: 0;
     font-size: 20px;
     line-height: 30px;
+
+    &--before {
+      margin-left: -1px;
+    }
   }
 }
 
@@ -131,6 +152,7 @@
     appearance: none;
     width: 428px;
     height: 6px;
+    margin-left: -7px;
     background-color: $scale-grey;
     border-radius: 6px;
     cursor: pointer;
@@ -144,7 +166,7 @@
       width: 8px;
       height: 8px;
       background-color: $basic-green;
-      border: 13px solid $basic-white;
+      border: 12px solid $basic-white;
       filter: drop-shadow(0 1px 3px rgba($basic-black, 0.16));
       border-radius: 50%;
       box-sizing: content-box;
