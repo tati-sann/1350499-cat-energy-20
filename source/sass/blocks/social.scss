@@ -1,23 +1,16 @@
 .social {
-  display: block;
+  @include no-list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  text-align: center;
+  padding: 18px 0;
 
   @media (min-width: $tablet-width) {
     min-width: 140px;
     max-width: auto;
     margin-top: -5px;
   }
-}
-
-.social__list {
-  @include no-list;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 18px 0;
-  margin: 0 auto;
 }
 
 .social__item {

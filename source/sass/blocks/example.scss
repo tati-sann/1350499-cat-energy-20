@@ -64,6 +64,7 @@
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", "Verdana", sans-serif;
+  color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
@@ -156,6 +157,7 @@
   font-family: "Arial", "Verdana", sans-serif;
   text-align: center;
   background-color: $background-grey;
+  color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
     bottom: -5px;

@@ -27,7 +27,7 @@
 }
 
 .contacts__map {
-  width: calc(100vw - 17px);
+  width: 100vw;
   height: 362px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
@@ -39,6 +39,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: calc(100vw - 17px);
     min-height: 400px;
     background-color: $basic-grey;
     background-image: url("../img/bg-map-tablet@1x.png");
