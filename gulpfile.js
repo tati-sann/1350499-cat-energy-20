@@ -14,6 +14,7 @@ const del = require("del");
 const htmlreplace = require("gulp-html-replace");
 const minify = require("gulp-minifier");
 const tildeImporter = require("node-sass-tilde-importer");
+const ghPages = require('gulp-gh-pages');
 
 // Styles
 
@@ -166,3 +167,8 @@ exports.build = build;
 exports.default = gulp.series(
   build, server, watcher
 );
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
